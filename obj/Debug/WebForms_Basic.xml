@@ -1,0 +1,5465 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+KeihiWeb
+</name>
+</assembly>
+<members>
+<member name="F:KeihiWeb.Common.Constants.SystemName">
+ <summary>
+ システム名
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:KeihiWeb.Common.Constants.DateTimeMSFormat">
+ <summary>
+ 日時のフォーマット（ミリ秒）
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:KeihiWeb.Common.Constants.MaxDate">
+ <summary>
+ 最大日付
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="T:KeihiWeb.Common.Constants.IMEMode">
+ <summary>
+ IMEのモード設定
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="T:KeihiWeb.Common.Constants.MessageMode">
+ <summary>
+ メッセージモード
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="T:KeihiWeb.Common.Constants.UserLevel">
+ <summary>
+ ユーザーレベル
+ </summary>
+</member>
+<member name="M:KeihiWeb.Common.Logging.DataLogger.DataLogWriter(System.String,System.Data.DataTable,System.Boolean)">
+ <summary>
+ データのログを記録する
+ </summary>
+ <param name="op">操作名、メソッド名など任意で設定する</param>
+ <param name="dt">データテーブル</param>
+ <param name="PrintCaption">
+ １行目に項目名を出力するかしないかを設定する（省略時は出力しない）<br />
+ True：項目名を出力する<br />
+ False：項目名を出力しない<br />
+ </param>
+ <remarks></remarks>
+</member>
+<member name="T:KeihiWeb.Common.Logging.Logger">
+ <summary>
+ ログ出力クラス
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:KeihiWeb.Common.Logging.Logger.CSVLogWriter(KeihiWeb.Common.Logging.LogInfoVal)">
+ <summary>
+ CSVファイルにログを出力する
+ </summary>
+ <param name="loginfo">ログ情報</param>
+ <remarks></remarks>
+</member>
+<member name="M:KeihiWeb.Common.Logging.Logger.GetLoginfo(System.String)">
+ <summary>
+ ログ情報を取得する
+ </summary>
+ <param name="kind">ログ種別：HttpApplication オブジェクトから発生するイベント名</param>
+ <returns>ログ情報をLogData型で返す</returns>
+ <remarks></remarks>
+</member>
+<member name="M:KeihiWeb.Common.Logging.Logger.GetErrLogInfo">
+ <summary>
+ エラーログの情報を取得する
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:KeihiWeb.Common.Logging.Logger.WriteErrLog(System.Exception,System.String,System.String,System.String)">
+ <summary>
+ エラーログを記録する
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:KeihiWeb.Common.Logging.Logger.WriteLog(System.String)">
+ <summary>
+ ログを記録する
+ </summary>
+ <param name="kind">種別（任意）</param>
+ <remarks></remarks>
+</member>
+<member name="M:KeihiWeb.Common.Logging.Logger.WriteLog(System.String,System.String)">
+ <summary>
+ ログを記録する
+ </summary>
+ <param name="kind">ログ種別</param>
+ <param name="msg">メッセージ</param>
+ <remarks></remarks>
+</member>
+<member name="T:KeihiWeb.Common.Logging.LogInfoVal">
+ <summary>
+ ログの出力情報を管理する
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="P:KeihiWeb.Common.Logging.LogInfoVal.Timestamp">
+ <summary>
+ ログ出力日時
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:KeihiWeb.Common.Logging.LogInfoVal.ComputerName">
+ <summary>
+ サーバー名
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:KeihiWeb.Common.Logging.LogInfoVal.ProcessID">
+ <summary>
+ プロセスID
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:KeihiWeb.Common.Logging.LogInfoVal.MethodName">
+ <summary>
+ メソッド名
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:KeihiWeb.Common.Logging.LogInfoVal.LogKind">
+ <summary>
+ ログ種別
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:KeihiWeb.Common.Logging.LogInfoVal.SessionId">
+ <summary>
+ セッションID
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:KeihiWeb.Common.Logging.LogInfoVal.SystemID">
+ <summary>
+ システムID
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:KeihiWeb.Common.Logging.LogInfoVal.RequestFilePath">
+ <summary>
+ リクエストされたURLパス
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:KeihiWeb.Common.Logging.LogInfoVal.UserHostAddress">
+ <summary>
+ ユーザーホストIPアドレス
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:KeihiWeb.Common.Logging.LogInfoVal.UserHostName">
+ <summary>
+ ユーザーホスト名
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:KeihiWeb.Common.Logging.LogInfoVal.LogonUserID">
+ <summary>
+ WindowsログオンID
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:KeihiWeb.Common.Logging.LogInfoVal.HttpMethod">
+ <summary>
+ HTTPメソッド
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:KeihiWeb.Common.Logging.LogInfoVal.LoginID">
+ <summary>
+ アプリケーションへのログインID
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:KeihiWeb.Common.Logging.LogInfoVal.MessageCode">
+ <summary>
+ メッセージコード
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:KeihiWeb.Common.Logging.LogInfoVal.MessageString">
+ <summary>
+ ログ出力するメッセージ内容
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:KeihiWeb.Common.Logging.LogInfoVal.StackTrace">
+ <summary>
+ スタックとレース
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:KeihiWeb.Common.Logging.LogInfoVal.ToCSV">
+ <summary>
+ ログ情報をCSV形式にして返す
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:KeihiWeb.Common.uty.Uty_Common.isZenkaku(System.String)">
+ <summary>
+ 文字列が全て全角かどうかを判定する
+ </summary>
+ <param name="vStr">文字列</param>
+ <returns>全て全角ならTrue、そうでなければFalse</returns>
+ <remarks></remarks>
+</member>
+<member name="M:KeihiWeb.Common.uty.Uty_Common.isHankaku(System.String)">
+ <summary>
+ 文字列が全て半角かどうかを判定する
+ </summary>
+ <param name="vStr">文字列</param>
+ <returns>全て半角ならTrue、そうでなければFalse</returns>
+ <remarks></remarks>
+</member>
+<member name="M:KeihiWeb.Common.uty.Uty_Common.IsExistSpace(System.String)">
+ <summary>
+ 文字列中にスペースが含まれているか判定する
+ </summary>
+ <param name="vStr">文字列</param>
+ <returns>文字列中にスペースが含まれていればTrueを返す</returns>
+ <remarks></remarks>
+</member>
+<member name="M:KeihiWeb.Common.uty.Uty_Common.GetByteCountToHost(System.String)">
+ <summary>
+ SOK、EOKを考慮した全角、半角混じり文字列のバイト数を取得する
+ </summary>
+ <param name="vStr">文字列</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:KeihiWeb.Common.uty.Uty_Common.GetByteCount(System.String)">
+ <summary>
+ 半角全角交じり文字列のバイト数を取得する
+ </summary>
+ <param name="vStr">文字列</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:KeihiWeb.Common.uty.Uty_Common.htmlenc(System.String)">
+ <summary>
+ 文字列をHTMLエンコードする
+ </summary>
+ <param name="v">文字列</param>
+ <returns>HTMLエンコードされた文字列</returns>
+ <remarks>半角スペースは＆nbsp;に変換される</remarks>
+</member>
+<member name="M:KeihiWeb.Common.uty.Uty_Common.ToRoundUp(System.Double,System.Int32)">
+ ------------------------------------------------------------------------
+ <summary>
+     指定した精度の数値に切り上げします。</summary>
+ <param name="dValue">
+     丸め対象の倍精度浮動小数点数。</param>
+ <param name="iDigits">
+     戻り値の有効桁数の精度。</param>
+ <returns>
+     iDigits に等しい精度の数値に切り上げられた数値。</returns>
+ ------------------------------------------------------------------------
+</member>
+<member name="M:KeihiWeb.Common.uty.Uty_Common.ToRoundDown(System.Double,System.Int32)">
+ ------------------------------------------------------------------------
+ <summary>
+     指定した精度の数値に切り捨てします。</summary>
+ <param name="dValue">
+     丸め対象の倍精度浮動小数点数。</param>
+ <param name="iDigits">
+     戻り値の有効桁数の精度。</param>
+ <returns>
+     iDigits に等しい精度の数値に切り捨てられた数値。</returns>
+ ------------------------------------------------------------------------
+</member>
+<member name="M:KeihiWeb.Common.uty.Uty_Common.ToHalfAdjust(System.Double,System.Int32)">
+ ------------------------------------------------------------------------
+ <summary>
+     指定した精度の数値に四捨五入します。</summary>
+ <param name="dValue">
+     丸め対象の倍精度浮動小数点数。</param>
+ <param name="iDigits">
+     戻り値の有効桁数の精度。</param>
+ <returns>
+     iDigits に等しい精度の数値に四捨五入された数値。</returns>
+ ------------------------------------------------------------------------
+</member>
+<member name="M:KeihiWeb.Common.uty.Uty_Common.GetCheckedValue(System.Boolean)">
+ <summary>
+ CheckBoxのCheckedプロパティの値を変換する
+ </summary>
+ <param name="Value">Checkedプロパティ値</param>
+ <returns>
+ 引数がTrueの場合、1を返す<br />
+ 引数がFalseの場合、0を返す<br />
+ </returns>
+ <remarks></remarks>
+</member>
+<member name="M:KeihiWeb.Common.uty.Uty_Common.SetCheckedValue(System.Int32)">
+ <summary>
+ 引数に渡された文字列をCheckBoxのCheckedプロパティに渡す値に変換する
+ </summary>
+ <param name="Value">"1"、または"0"を渡す</param>
+ <returns>
+ 引数が1の場合、Trueを返す<br />
+ 引数が0の場合、Falseを返す<br />
+ </returns>
+ <remarks></remarks>
+</member>
+<member name="M:KeihiWeb.Common.uty.Uty_Common.ChangeCharToDateFormat(System.String,System.String)">
+ <summary>
+ 6桁または8桁の数値の連続で表現された日付をyyyy/MM/dd形式に変換する
+ </summary>
+ <param name="value">日付文字列</param>
+ <param name="formatString">出力フォーマット（ToString準拠）</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:KeihiWeb.Common.uty.Uty_Common.ChangeStringToDate(System.String)">
+ <summary>
+ 文字列yyyyMMddをyyyy/MM/ddの日付型に変換する
+ </summary>
+ <param name="value"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:KeihiWeb.Common.uty.Uty_Common.ValidateNengetu(System.String)">
+ <summary>
+ 年月に矛盾がないか確認する
+ </summary>
+ <param name="value">年月を年4桁、月2桁で渡す（例：201102）</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:KeihiWeb.Common.uty.Uty_Common.IsDate(System.String)">
+ <summary>
+ 指定した文字列が日付か検査する
+ </summary>
+ <param name="vValue">文字列</param>
+ <returns>True：日付　False：日付でない</returns>
+ <remarks></remarks>
+</member>
+<member name="M:KeihiWeb.Common.uty.Uty_Common.ChangeDateToString(System.Object)">
+ <summary>
+ 文字列yyyy/MM/ddをyyyyMMddの日付型に変換する
+ </summary>
+ <param name="value"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:KeihiWeb.Common.uty.Uty_Common.ConvertDelim(System.String)">
+ <summary>
+ デリミタをVB形式に変換する
+ </summary>
+ <param name="s">デリミタ文字列</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:KeihiWeb.Common.uty.Uty_Common.SeparateWords(System.String)">
+ <summary>
+ 文字列をスペースで分ける
+ </summary>
+ <param name="vWords">文字列</param>
+ <returns>スペースで分けられた文字列が格納されたジェネリックコレクションを返す</returns>
+ <remarks>スペースを文字列として格納したい場合はダブルクォートで括る</remarks>
+</member>
+<member name="M:KeihiWeb.Common.uty.Uty_Common.SeparateWords(System.String,System.String,System.Int32)">
+ <summary>
+ 指定した桁数ごとに文字列を区切る
+ </summary>
+ <param name="vWord">文字列</param>
+ <param name="vSepareter">区切り文字</param>
+ <param name="vDigit">桁数</param>
+ <returns>指定した桁数ごとに指定した文字で区切られた文字列を返す</returns>
+ <remarks>例）SeparateWords(20135606, ":" , 2)　結果＝20:13:56:06</remarks>
+</member>
+<member name="M:KeihiWeb.Common.uty.Uty_Common.GetBlankToZero(System.String)">
+ <summary>
+ 引数が文字列またはブランクの時0を返す
+ </summary>
+ <param name="vText">文字列</param>
+ <returns>数値</returns>
+ <remarks></remarks>
+</member>
+<member name="M:KeihiWeb.Common.uty.Uty_Common.IsDBNullToZero(System.Object)">
+ <summary>
+ DBNullを0に変換
+ </summary>
+ <param name="vText">DBNullの可能性があるオブジェクト</param>
+ <returns></returns>
+</member>
+<member name="M:KeihiWeb.Common.uty.Uty_Common.GetGetsumatu(System.String)">
+ <summary>
+ 指定月の月末日を取得する
+ </summary>
+ <param name="vYM">年月をyyyyMMで指定する</param>
+ <returns>月末日（Date型）</returns>
+</member>
+<member name="M:KeihiWeb.Common.uty.Uty_Common.StringCut(System.String,System.Int32)">
+ <summary>
+ 文字列を指定の幅(バイト数)にカットする（漢字分断回避）
+ </summary>
+ <param name="vString">文字列</param>
+ <param name="vLen">桁数</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:KeihiWeb.Common.uty.Uty_Config.ConnectionStrings">
+ <summary>
+ データベース接続情報を取得する
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:KeihiWeb.Common.uty.Uty_Config.ConnectionString">
+ <summary>
+ データベース接続文字列を取得する
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:KeihiWeb.Common.uty.Uty_Config.ConnectionString(System.String)">
+ <summary>
+ データベース接続文字列を取得する
+ </summary>
+ <param name="vDbName">データベース名</param>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:KeihiWeb.Common.uty.Uty_Config.ConnectionStrings(System.String)">
+ <summary>
+ データベース接続文字列を取得する
+ </summary>
+ <param name="vDbName">データベース名</param>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:KeihiWeb.Common.uty.Uty_Config.Version">
+ <summary>
+ バージョン番号
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:KeihiWeb.Common.uty.Uty_Config.SQLESC">
+ <summary>
+ SQL用エスケープ文字
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:KeihiWeb.Common.uty.Uty_Config.CommandTimeout">
+ <summary>
+ SQLコマンドタイムアウト
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:KeihiWeb.Common.uty.Uty_Config.LogFolder">
+ <summary>
+ ログ出力先フォルダ
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:KeihiWeb.Common.uty.Uty_Config.Delimiter">
+ <summary>
+ ファイル出力区切り文字
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:KeihiWeb.Common.uty.Uty_Config.DataFolder">
+ <summary>
+ データフォルダ
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:KeihiWeb.Common.uty.Uty_Config.XlFolder">
+ <summary>
+ xlsxダウンロードファイル保存先フォルダ
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:KeihiWeb.Common.uty.Uty_Config.WorkFolder">
+ <summary>
+ ワークフォルダ
+ </summary>
+ <returns></returns>
+</member>
+<member name="P:KeihiWeb.Common.uty.Uty_Config.OutputDir">
+ <summary>
+ ダウンロードファイル保存先フォルダ
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:KeihiWeb.Common.uty.Uty_Config.ENC">
+ <summary>
+ エンコード
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:KeihiWeb.Common.uty.Uty_Config.ShimebiSuitou">
+ <summary>
+ 現金出納帳締日
+ </summary>
+ <value></value>
+ <returns>配列</returns>
+ <remarks></remarks>
+</member>
+<member name="P:KeihiWeb.Common.uty.Uty_Config.ShimebiSeikyu">
+ <summary>
+ 請求締日
+ </summary>
+ <value></value>
+ <returns>配列</returns>
+ <remarks></remarks>
+</member>
+<member name="P:KeihiWeb.Common.uty.Uty_Config.GloviaDmain">
+ <summary>
+ GLOVIAドメイン名
+ </summary>
+ <returns></returns>
+</member>
+<member name="P:KeihiWeb.Common.uty.Uty_Config.GloviaUserId">
+ <summary>
+ GLOVIAユーザーID
+ </summary>
+ <returns></returns>
+</member>
+<member name="P:KeihiWeb.Common.uty.Uty_Config.GloviaPass">
+ <summary>
+ GLOVIAパスワード
+ </summary>
+ <returns></returns>
+</member>
+<member name="P:KeihiWeb.Common.uty.Uty_Config.GloviaFolder">
+ <summary>
+ GLOVIAインターフェースファイルコピー先フォルダ
+ </summary>
+ <returns></returns>
+</member>
+<member name="P:KeihiWeb.Common.uty.Uty_Config.GloviaKeihi">
+ <summary>
+ GLOVIAインターフェースファイル名（経費）
+ </summary>
+ <returns></returns>
+</member>
+<member name="P:KeihiWeb.Common.uty.Uty_Config.GloviaSeikyu">
+ <summary>
+ GLOVIAインターフェースファイル名（請求）
+ </summary>
+ <returns></returns>
+</member>
+<member name="P:KeihiWeb.Common.uty.Uty_Config.GloviaKaishaCd">
+ <summary>
+ GLOVIAインターフェース用会社コード
+ </summary>
+ <returns></returns>
+</member>
+<member name="P:KeihiWeb.Common.uty.Uty_Config.GloviaKaishaName">
+ <summary>
+ GLOVIAインターフェース用会社名
+ </summary>
+ <returns></returns>
+</member>
+<member name="P:KeihiWeb.Common.uty.Uty_Config.FreeeUserId">
+ <summary>
+ GLOVIAユーザーID
+ </summary>
+ <returns></returns>
+</member>
+<member name="P:KeihiWeb.Common.uty.Uty_Config.FreeePass">
+ <summary>
+ GLOVIAパスワード
+ </summary>
+ <returns></returns>
+</member>
+<member name="P:KeihiWeb.Common.uty.Uty_Config.FreeeFolder">
+ <summary>
+ GLOVIAインターフェースファイルコピー先フォルダ
+ </summary>
+ <returns></returns>
+</member>
+<member name="P:KeihiWeb.Common.uty.Uty_Config.FreeeKeihi">
+ <summary>
+ GLOVIAインターフェースファイル名（経費）
+ </summary>
+ <returns></returns>
+</member>
+<member name="P:KeihiWeb.Common.uty.Uty_Config.FreeeSeikyu">
+ <summary>
+ GLOVIAインターフェースファイル名（請求）
+ </summary>
+ <returns></returns>
+</member>
+<member name="P:KeihiWeb.Common.uty.Uty_Config.NyuSyukin_MaxGYO">
+ <summary>
+ 伝票入力
+ </summary>
+ <returns></returns>
+</member>
+<member name="M:KeihiWeb.Common.uty.Uty_Dbinfo.ConvertToDbType(System.Type)">
+ <summary>
+ System.Type を SqlDataType に変換する
+ </summary>
+ <param name="t">System.Type</param>
+ <returns>
+ SqlDataType<br />
+ 一致しない場合、Variant を返す<br />
+ </returns>
+ <remarks></remarks>
+</member>
+<member name="M:KeihiWeb.Common.uty.Uty_Dbinfo.IsDbTypeChar(System.Type)">
+ <summary>
+ カラムの型が文字型かどうかを検査する
+ </summary>
+ <param name="t">カラム型</param>
+ <returns>True：文字型　False：数値型</returns>
+ <remarks></remarks>
+</member>
+<member name="M:KeihiWeb.Common.uty.Uty_Dbinfo.GetFieldName(System.Data.DataTable)">
+ <summary>
+ データテーブルのフィールド一覧を取得する
+ </summary>
+ <param name="paramValue">データテーブル</param>
+ <returns>フィールドのコレクションを返す</returns>
+ <remarks></remarks>
+</member>
+<member name="M:KeihiWeb.Common.uty.Uty_Dbinfo.EscapeSQLLIKE(System.String,System.Char)">
+ <summary>
+ SQLServerのLIKE句ワイルドカード文字列をエスケープする
+ </summary>
+ <param name="str">文字列</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:KeihiWeb.Common.uty.Uty_Dbinfo.SpExecuteNonQuery(System.String[])">
+ <summary>
+ ストアドプロシージャを実行する
+ </summary>
+ <param name="param">ストアドに渡すパラメータ
+ 第１パラメータ：ストアドプロシージャ名（必須）
+ 第２パラメータ以降
+ 　　ストアドプロシージャで定義されているパラメータの数だけ指定する
+ </param>
+ <remarks></remarks>
+</member>
+<member name="M:KeihiWeb.Common.uty.Uty_Dbinfo.SpExecuteFill(System.String[])">
+ <summary>
+ ストアドプロシージャを実行する
+ </summary>
+ <param name="param">ストアドに渡すパラメータ
+ 第１パラメータ：ストアドプロシージャ名（必須）
+ 第２パラメータ以降
+ 　　ストアドプロシージャで定義されているパラメータの数だけ指定する
+ </param>
+ <returns>DataTable</returns>
+ <remarks></remarks>
+</member>
+<member name="M:KeihiWeb.Common.uty.Uty_Dbinfo.SpExecuteReturnValue(System.String[])">
+ <summary>
+ ストアドプロシージャを実行する（戻り値あり）
+ </summary>
+ <param name="param">ストアドに渡すパラメータ
+ 第１パラメータ：ストアドプロシージャ名（必須）
+ 第２パラメータ以降
+ 　　ストアドプロシージャで定義されているパラメータの数だけ指定する
+ </param>
+ <returns>ReturnValue</returns>
+ <remarks></remarks>
+</member>
+<member name="M:KeihiWeb.Common.uty.Uty_Dbinfo.GetDate">
+ <summary>
+ サーバー側の日時を取得する
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:KeihiWeb.Common.uty.Uty_Dbinfo.IsNullSQL(System.Data.DataTable,System.String)">
+ <summary>
+ ISNULL句を生成する
+ </summary>
+ <param name="aDt">データセット</param>
+ <param name="aColumnName">カラム名</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:KeihiWeb.Common.uty.Uty_File.DeleteTemporary(System.String,System.String,System.Int32)">
+ <summary>
+ カレントフォルダ以下にある、保存期間以前の指定した拡張子を持つファイルを削除する
+ </summary>
+ <param name="currentfolder">カレントフォルダ</param>
+ <param name="extention">削除するファイルの拡張子</param>
+ <param name="savemonth">ファイルの保存月数</param>
+ <remarks></remarks>
+</member>
+<member name="M:KeihiWeb.Common.uty.Uty_File.DeleteFolder(System.String)">
+ <summary>
+ 指定したフォルダを削除する
+ </summary>
+ <param name="currentfolder">フォルダパス</param>
+ <remarks></remarks>
+</member>
+<member name="M:KeihiWeb.Common.uty.Uty_File.DeleteFile(System.String)">
+ <summary>
+ 指定したファイルを削除する
+ </summary>
+ <param name="vPath">フルパス</param>
+ <remarks></remarks>
+</member>
+<member name="M:KeihiWeb.Common.uty.Uty_File.GetExtension(System.String)">
+ <summary>
+ ファイル名から拡張子を取得する
+ </summary>
+ <param name="vFilename">パス</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:KeihiWeb.Common.uty.Uty_File.GetFilename(System.String,System.Boolean)">
+ <summary>
+ パスからファイル名を取得する
+ </summary>
+ <param name="vPath">パス</param>
+ <param name="vIsExt">True：拡張子付　False：拡張子なし</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:KeihiWeb.Common.uty.Uty_File.GetFolder(System.String,System.Int32)">
+ <summary>
+ パスからフォルダ名を取得する
+ </summary>
+ <param name="vPath">パス</param>
+ <param name="vMark">最後の\マークが必要な場合、1を渡す</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:KeihiWeb.Common.uty.Uty_File.AddFolderMark(System.String)">
+ <summary>
+ フォルダ名の最後に\がなければ追記する
+ </summary>
+ <param name="vFolder">フォルダ名</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:KeihiWeb.Common.uty.Uty_File.CreateFolder(System.String)">
+ <summary>
+ フォルダが存在していなければ作成する
+ </summary>
+ <param name="vFolder"></param>
+ <remarks></remarks>
+</member>
+<member name="M:KeihiWeb.Common.uty.Uty_File.RenameAddDate(System.String,System.String)">
+ <summary>
+ ファイル名に日付を付加する
+ </summary>
+ <param name="vFile">ファイル名</param>
+ <param name="vFormat">日付書式（省略時：yyyyMMddHHmmssfff）</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:KeihiWeb.Common.uty.Uty_File.CountFileCopy(System.String,System.String@,System.Int32)">
+ <summary>
+ ファイルをコピーする。コピー先にファイルが存在した場合、指定回数までファイル名末尾にカウンタを付加してコピーする。
+ </summary>
+ <param name="vSrcFile">コピー元パス</param>
+ <param name="vTargetFile">コピー先パス</param>
+ <param name="vCount">回数</param>
+ <returns>コピー出来た場合：True　コピー出来なかった場合：False</returns>
+ <remarks></remarks>
+</member>
+<member name="M:KeihiWeb.Common.uty.Uty_File.ExistRename(System.String@,System.Int32)">
+ <summary>
+ 指定したパスが存在していた場合、指定回数分リネームする
+ </summary>
+ <param name="vPath">パス（戻り値）</param>
+ <param name="vCount">回数</param>
+ <returns>True：リネーム成功　False：リネーム失敗</returns>
+ <remarks></remarks>
+</member>
+<member name="M:KeihiWeb.Common.uty.Uty_TextFile.Join(System.Collections.IEnumerable,System.String,System.Boolean)">
+ <summary>
+ IEnumerableを取得して、カンマ区切りの文字列を返す
+ </summary>
+ <param name="enumerable">コレクション、または配列</param>
+ <param name="separator">デリミタ</param>
+ <param name="quote">文字列をダブルクォーテーションで囲む場合はTrueを渡す</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:KeihiWeb.Common.uty.Uty_TextFile.TextWriter(System.String,System.String,System.Boolean)">
+ <summary>
+ 文字列をテキストファイルに書き出す
+ </summary>
+ <param name="text">文字列</param>
+ <param name="fullpath">フルパス</param>
+ <param name="OverWrite">上書きのときTrueを指定する</param>
+ <remarks></remarks>
+</member>
+<member name="M:KeihiWeb.Common.uty.Uty_TextFile.TextWriter(System.Text.StringBuilder,System.Boolean,System.String)">
+ <summary>
+ テキストファイルに出力する
+ </summary>
+ <param name="vText">文字列（StringBuilder型）</param>
+ <param name="vAppend">True:追記　False:上書き</param>
+ <param name="fullpath">フルパス名</param>
+ <remarks></remarks>
+</member>
+<member name="M:KeihiWeb.Common.uty.Uty_TextFile.TextWriter(System.Data.DataTable,System.String,System.Boolean,System.Boolean)">
+ <summary>
+ テキストファイルに出力する
+ </summary>
+ <param name="dt">DataTable</param>
+ <param name="fullpath">フルパス名</param>
+ <remarks></remarks>
+</member>
+<member name="M:KeihiWeb.Common.uty.Uty_TextFile.IsOverTextLength(System.String,System.Int32)">
+ <summary>
+ 1行当たりの桁数が指定桁数より多い時、Trueを返す
+ </summary>
+ <param name="vPath">ファイルパス</param>
+ <param name="vLength">桁数</param>
+ <returns>桁数を超えた：True　桁数以内：False</returns>
+ <remarks></remarks>
+</member>
+<member name="M:KeihiWeb.Common.uty.Uty_UI.GetTabId(System.Object)">
+ <summary>
+ タブ識別IDを取得する
+ </summary>
+ <param name="sender">画面オブジェクト</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:KeihiWeb.Common.uty.Uty_UI.ShowMessage(System.Web.UI.WebControls.Label@,System.Int32,System.String)">
+ <summary>
+ メッセージを表示する
+ </summary>
+ <param name="vStatusLabel">ラベルオブジェクト</param>
+ <param name="vMsgMode">メッセージモード</param>
+ <param name="vMessageText">メッセージ文字列</param>
+ <remarks></remarks>
+</member>
+<member name="F:KeihiWeb.Ctrl.UserLevel.Normal">
+ <summary>
+ 一般権限
+ </summary>
+</member>
+<member name="F:KeihiWeb.Ctrl.UserLevel.Keiri">
+ <summary>
+ 経理担当
+ </summary>
+</member>
+<member name="F:KeihiWeb.Ctrl.UserLevel.Admin">
+ <summary>
+ システム管理者
+ </summary>
+</member>
+<member name="M:KeihiWeb.Ctrl.CTL_AUTH.Login(System.String,System.String)">
+ <summary>
+ ログイン認証する
+ </summary>
+ <param name="vId">社員番号</param>
+ <param name="vPass">パスワード</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:KeihiWeb.Ctrl.CTL_CT_CLOSE.GetLastCloseDate(System.String,System.Int32)">
+ <summary>
+ 最終締日を取得する
+ </summary>
+ <param name="vJibumonCd">自部門コード</param>
+ <param name="vClassNo">業務種別　１：出納帳（省略時）　２：請求書</param>
+ <returns></returns>
+</member>
+<member name="M:KeihiWeb.Ctrl.CTL_CT_CLOSE.GetZandaka(System.String,System.String,System.Int32)">
+ <summary>
+ 締めテーブルより残高を取得する
+ </summary>
+ <param name="vJibumonCd">自部門コード</param>
+ <param name="vCloseDate">締日</param>
+ <param name="vClassNo">業務種別　１：出納帳（省略時）　２：請求書</param>
+ <returns></returns>
+</member>
+<member name="M:KeihiWeb.Ctrl.CTL_CT_CLOSE.Insert(System.String,System.String,System.Decimal,System.Int32)">
+ <summary>
+ データを生成してインサートする
+ </summary>
+ <param name="vJibumoncd">自部門コード</param>
+ <param name="vShimebi">締日</param>
+ <param name="vZandaka">残高</param>
+ <param name="vClassNo">業務種別　1：現金出納帳　2：請求書</param>
+ <returns></returns>
+</member>
+<member name="M:KeihiWeb.Ctrl.CTL_CT_CLOSE.GetCloseKikan(System.Int32,System.String,System.String@,System.String@)">
+ <summary>
+ 対象日の締め期間(From-To)を返す
+ </summary>
+ <param name="vClassNo">業務種別　1：出納帳　2：請求</param>
+ <param name="vTokiShimebi">当期締日</param>
+ <param name="rStartDate">締め期間開始日</param>
+ <param name="rEndDate">締め期間終了日</param>
+</member>
+<member name="M:KeihiWeb.Ctrl.CTL_CT_CLOSE.Torikeshi(System.Int32,System.String,System.Int32,System.String)">
+ <summary>
+ 
+ </summary>
+ <param name="vUserLevel">ユーザーレベル</param>
+ <param name="vJibumonCd">自部門コード</param>
+ <param name="vClassNo">業務区分　１：出納　２：請求</param>
+ <param name="vCloseDate">締日</param>
+ <returns></returns>
+</member>
+<member name="M:KeihiWeb.Ctrl.CTL_GLOVIA.CreateSuitoFile(System.Collections.ArrayList,System.String)">
+ <summary>
+ GLOVIAコンバートファイルを生成する
+ </summary>
+ <param name="vBumonCd">部門コード（配列）</param>
+ <param name="vCloseDate">締日</param>
+ <returns>出力ファイルパス</returns>
+</member>
+<member name="M:KeihiWeb.Ctrl.CTL_GLOVIA.ConvertSuitou(System.String,System.Int32,System.String,KeihiWeb.DS_GLOVIA.CONV_SUITOURow)">
+ <summary>
+ GLOVIA Smart用データコンバート文字列作成 /　現金出納
+ </summary>
+ <param name="vNyuryokuNo">入力番号（伝票単位でユニーク）</param>
+ <param name="vGyoNo">明細行番号</param>
+ <param name="vShimebi">締日</param>
+ <param name="vRow">データRow</param>
+ <returns>コンバート文字列</returns>
+</member>
+<member name="M:KeihiWeb.Ctrl.CTL_GLOVIA.CreateSeikyuFile(System.Collections.ArrayList,System.String)">
+ <summary>
+ GLOVIAコンバートファイルを生成する（請求仕訳）
+ </summary>
+ <param name="vBumonCd">部門コード（配列）</param>
+ <param name="vCloseDate">締日</param>
+ <returns>出力ファイルパス</returns>
+</member>
+<member name="M:KeihiWeb.Ctrl.CTL_GLOVIA.ConvertSeikyu(System.String,System.Int32,System.String,KeihiWeb.DS_GLOVIA.CONV_SEIKYURow)">
+ <summary>
+ GLOVIA Smart用データコンバート文字列作成 /　請求書
+ </summary>
+ <param name="vNyuryokuNo">入力番号（伝票単位でユニーク）</param>
+ <param name="vGyoNo">明細行番号</param>
+ <param name="vShimebi">締日</param>
+ <param name="vRow">データRow</param>
+ <returns>コンバート文字列</returns>
+</member>
+<member name="M:KeihiWeb.Ctrl.CTL_GLOVIA.CreateSeikyuFile_Freee(System.Collections.ArrayList,System.String)">
+ <summary>
+ GLOVIAコンバートファイルを生成する（請求仕訳）
+ </summary>
+ <param name="vBumonCd">部門コード（配列）</param>
+ <param name="vCloseDate">締日</param>
+ <returns>出力ファイルパス</returns>
+</member>
+<member name="M:KeihiWeb.Ctrl.CTL_GLOVIA.ConvertSeikyu_FREEE(System.String,System.Int32,System.String,KeihiWeb.DS_GLOVIA.CONV_SEIKYURow)">
+ <summary>
+ GLOVIA Smart用データコンバート文字列作成 /　請求書
+ </summary>
+ <param name="vNyuryokuNo">入力番号（伝票単位でユニーク）</param>
+ <param name="vGyoNo">明細行番号</param>
+ <param name="vShimebi">締日</param>
+ <param name="vRow">データRow</param>
+ <returns>コンバート文字列</returns>
+</member>
+<member name="M:KeihiWeb.Ctrl.CTL_GLOVIA.UpdateOutputGloviaFlg(System.Collections.ArrayList,System.String,System.Int32)">
+ <summary>
+ GLOVIA出力済みフラグを更新する（CANCEL_FLG=2）
+ </summary>
+ <param name="vBumonCd">自部門コード（配列）</param>
+ <param name="vCloseDate">締日</param>
+ <param name="vClassNo">業務種別　1:出納　2:請求</param>
+ <returns></returns>
+</member>
+<member name="M:KeihiWeb.Ctrl.CTL_M_BUMON.GetShimeInfo(System.String,System.Int32)">
+ <summary>
+ 部門締め情報を取得する
+ </summary>
+ <param name="vCloseDate">締日</param>
+ <param name="vClassNo">業務種別　1:出納帳　2:請求書</param>
+ <returns></returns>
+</member>
+<member name="M:KeihiWeb.Ctrl.CTL_M_MENU.GetMenu(System.String,System.String)">
+ <summary>
+ メニュー情報を取得する
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:KeihiWeb.Ctrl.CTL_M_MENU.GetMenuURL(System.String,System.String,System.String@)">
+ <summary>
+ メニュー番号からURLを取得する
+ </summary>
+ <param name="vMenuNo">メニュー番号</param>
+ <param name="vPrivilege">権限</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:KeihiWeb.Ctrl.CTL_M_MENU.IsDispAuthFlg(System.String)">
+ <summary>
+ 使用権限フラグが１のときTrueを返す
+ </summary>
+ <param name="vMenuNo">メニュー番号</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:KeihiWeb.Ctrl.CTL_M_MENU.GetMenuNo(System.String)">
+ <summary>
+ メニュー番号を取得する
+ </summary>
+ <param name="vFormId">Me.GetType.Name</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:KeihiWeb.Ctrl.CTL_PAYMENT.Print_Suitou_KamokuBetsu(System.String,System.String,System.String,System.Int32)">
+ <summary>
+ 科目別出納帳を出力する（xslx）
+ </summary>
+ <param name="vJiBumonCd">自部門コード</param>
+ <param name="vInputDateFrom">締め期間開始日</param>
+ <param name="vInputDateTo">締め期間終了日</param>
+ <param name="vHakkoFlg">1:本発行　0:仮または再発行</param>
+ <returns>ファイルパス</returns>
+</member>
+<member name="M:KeihiWeb.Ctrl.CTL_PAYMENT.CalcZandaka(System.String,System.String,System.String,System.String)">
+ <summary>
+ 当期残高を取得する
+ </summary>
+ <param name="vJibumonCd">自部門コード</param>
+ <param name="vShimebi">締日</param>
+ <param name="vStartDate">締め期間開始日</param>
+ <param name="vEndDate">締め期間終了日</param>
+ <returns></returns>
+</member>
+<member name="T:KeihiWeb.DS_AUTH">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+<member name="T:KeihiWeb.DS_AUTH.AUTH_INFODataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:KeihiWeb.DS_AUTH.AUTH_INFORow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:KeihiWeb.DS_AUTH.AUTH_INFORowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:KeihiWeb.DS_BILL">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+<member name="T:KeihiWeb.DS_BILL.CT_BILL1DataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:KeihiWeb.DS_BILL.CT_BILL2DataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:KeihiWeb.DS_BILL.RPT_SHIWAKEDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:KeihiWeb.DS_BILL.SearchParam_ListDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:KeihiWeb.DS_BILL.CT_BILL1_DENPYODataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:KeihiWeb.DS_BILL.CT_MEISAI_DISPDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:KeihiWeb.DS_BILL.CT_HEADER_DISPDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:KeihiWeb.DS_BILL.SearchParamDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:KeihiWeb.DS_BILL.CT_SELECTBILLDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:KeihiWeb.DS_BILL.CT_BILL1Row">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:KeihiWeb.DS_BILL.CT_BILL2Row">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:KeihiWeb.DS_BILL.RPT_SHIWAKERow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:KeihiWeb.DS_BILL.SearchParam_ListRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:KeihiWeb.DS_BILL.CT_BILL1_DENPYORow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:KeihiWeb.DS_BILL.CT_MEISAI_DISPRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:KeihiWeb.DS_BILL.CT_HEADER_DISPRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:KeihiWeb.DS_BILL.SearchParamRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:KeihiWeb.DS_BILL.CT_SELECTBILLRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:KeihiWeb.DS_BILL.CT_BILL1RowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:KeihiWeb.DS_BILL.CT_BILL2RowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:KeihiWeb.DS_BILL.RPT_SHIWAKERowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:KeihiWeb.DS_BILL.SearchParam_ListRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:KeihiWeb.DS_BILL.CT_BILL1_DENPYORowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:KeihiWeb.DS_BILL.CT_MEISAI_DISPRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:KeihiWeb.DS_BILL.CT_HEADER_DISPRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:KeihiWeb.DS_BILL.SearchParamRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:KeihiWeb.DS_BILL.CT_SELECTBILLRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:KeihiWeb.DS_BILLTableAdapters.CT_BILL1TableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:KeihiWeb.DS_BILLTableAdapters.CT_BILL2TableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:KeihiWeb.DS_BILLTableAdapters.TableAdapterManager">
+<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member>
+<member name="M:KeihiWeb.DS_BILLTableAdapters.TableAdapterManager.UpdateUpdatedRows(KeihiWeb.DS_BILL,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Update rows in top-down order.
+</summary>
+</member>
+<member name="M:KeihiWeb.DS_BILLTableAdapters.TableAdapterManager.UpdateInsertedRows(KeihiWeb.DS_BILL,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Insert rows in top-down order.
+</summary>
+</member>
+<member name="M:KeihiWeb.DS_BILLTableAdapters.TableAdapterManager.UpdateDeletedRows(KeihiWeb.DS_BILL,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Delete rows in bottom-up order.
+</summary>
+</member>
+<member name="M:KeihiWeb.DS_BILLTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member>
+<member name="M:KeihiWeb.DS_BILLTableAdapters.TableAdapterManager.UpdateAll(KeihiWeb.DS_BILL)">
+<summary>
+Update all changes to the dataset.
+</summary>
+</member>
+<member name="T:KeihiWeb.DS_BILLTableAdapters.TableAdapterManager.UpdateOrderOption">
+<summary>
+Update Order Option
+</summary>
+</member>
+<member name="T:KeihiWeb.DS_BILLTableAdapters.TableAdapterManager.SelfReferenceComparer">
+<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member>
+<member name="T:KeihiWeb.DS_CT_CLOSE">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+<member name="T:KeihiWeb.DS_CT_CLOSE.CT_CLOSEDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:KeihiWeb.DS_CT_CLOSE.CT_CLOSERow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:KeihiWeb.DS_CT_CLOSE.CT_CLOSERowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:KeihiWeb.DS_CT_CLOSETableAdapters.CT_CLOSETableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:KeihiWeb.DS_CT_CLOSETableAdapters.TableAdapterManager">
+<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member>
+<member name="M:KeihiWeb.DS_CT_CLOSETableAdapters.TableAdapterManager.UpdateUpdatedRows(KeihiWeb.DS_CT_CLOSE,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Update rows in top-down order.
+</summary>
+</member>
+<member name="M:KeihiWeb.DS_CT_CLOSETableAdapters.TableAdapterManager.UpdateInsertedRows(KeihiWeb.DS_CT_CLOSE,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Insert rows in top-down order.
+</summary>
+</member>
+<member name="M:KeihiWeb.DS_CT_CLOSETableAdapters.TableAdapterManager.UpdateDeletedRows(KeihiWeb.DS_CT_CLOSE,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Delete rows in bottom-up order.
+</summary>
+</member>
+<member name="M:KeihiWeb.DS_CT_CLOSETableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member>
+<member name="M:KeihiWeb.DS_CT_CLOSETableAdapters.TableAdapterManager.UpdateAll(KeihiWeb.DS_CT_CLOSE)">
+<summary>
+Update all changes to the dataset.
+</summary>
+</member>
+<member name="T:KeihiWeb.DS_CT_CLOSETableAdapters.TableAdapterManager.UpdateOrderOption">
+<summary>
+Update Order Option
+</summary>
+</member>
+<member name="T:KeihiWeb.DS_CT_CLOSETableAdapters.TableAdapterManager.SelfReferenceComparer">
+<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member>
+<member name="T:KeihiWeb.DS_GLOVIA">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+<member name="T:KeihiWeb.DS_GLOVIA.CONV_SUITOUDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:KeihiWeb.DS_GLOVIA.CONV_SEIKYUDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:KeihiWeb.DS_GLOVIA.CONV_SUITOU_FDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:KeihiWeb.DS_GLOVIA.CONV_SUITOURow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:KeihiWeb.DS_GLOVIA.CONV_SEIKYURow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:KeihiWeb.DS_GLOVIA.CONV_SUITOU_FRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:KeihiWeb.DS_GLOVIA.CONV_SUITOURowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:KeihiWeb.DS_GLOVIA.CONV_SEIKYURowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:KeihiWeb.DS_GLOVIA.CONV_SUITOU_FRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:KeihiWeb.DS_M_KAMOKU">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+<member name="T:KeihiWeb.DS_M_KAMOKU.M_KAMOKUDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:KeihiWeb.DS_M_KAMOKU.M_KAMOKURow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:KeihiWeb.DS_M_KAMOKU.M_KAMOKURowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:KeihiWeb.DS_M_MENU">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+<member name="T:KeihiWeb.DS_M_MENU.M_MEMUDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:KeihiWeb.DS_M_MENU.M_MENUDtDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:KeihiWeb.DS_M_MENU.M_MEMURow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:KeihiWeb.DS_M_MENU.M_MENUDtRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:KeihiWeb.DS_M_MENU.M_MEMURowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:KeihiWeb.DS_M_MENU.M_MENUDtRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:KeihiWeb.DS_M_MENUTableAdapters.M_MEMUTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:KeihiWeb.DS_M_MENUTableAdapters.TableAdapterManager">
+<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member>
+<member name="M:KeihiWeb.DS_M_MENUTableAdapters.TableAdapterManager.UpdateUpdatedRows(KeihiWeb.DS_M_MENU,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Update rows in top-down order.
+</summary>
+</member>
+<member name="M:KeihiWeb.DS_M_MENUTableAdapters.TableAdapterManager.UpdateInsertedRows(KeihiWeb.DS_M_MENU,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Insert rows in top-down order.
+</summary>
+</member>
+<member name="M:KeihiWeb.DS_M_MENUTableAdapters.TableAdapterManager.UpdateDeletedRows(KeihiWeb.DS_M_MENU,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Delete rows in bottom-up order.
+</summary>
+</member>
+<member name="M:KeihiWeb.DS_M_MENUTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member>
+<member name="M:KeihiWeb.DS_M_MENUTableAdapters.TableAdapterManager.UpdateAll(KeihiWeb.DS_M_MENU)">
+<summary>
+Update all changes to the dataset.
+</summary>
+</member>
+<member name="T:KeihiWeb.DS_M_MENUTableAdapters.TableAdapterManager.UpdateOrderOption">
+<summary>
+Update Order Option
+</summary>
+</member>
+<member name="T:KeihiWeb.DS_M_MENUTableAdapters.TableAdapterManager.SelfReferenceComparer">
+<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member>
+<member name="T:KeihiWeb.DS_M_TRADE">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+<member name="T:KeihiWeb.DS_M_TRADE.M_TRADEDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:KeihiWeb.DS_M_TRADE.M_TRADERow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:KeihiWeb.DS_M_TRADE.M_TRADERowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:KeihiWeb.DS_M_UTIWAKE">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+<member name="T:KeihiWeb.DS_M_UTIWAKE.M_UCHIWAKEDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:KeihiWeb.DS_M_UTIWAKE.M_UCHIWAKE_MNTDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:KeihiWeb.DS_M_UTIWAKE.M_UCHIWAKERow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:KeihiWeb.DS_M_UTIWAKE.M_UCHIWAKE_MNTRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:KeihiWeb.DS_M_UTIWAKE.M_UCHIWAKERowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:KeihiWeb.DS_M_UTIWAKE.M_UCHIWAKE_MNTRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:KeihiWeb.DS_M_ZEIRITU">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+<member name="T:KeihiWeb.DS_M_ZEIRITU.M_ZEIRITUDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:KeihiWeb.DS_M_ZEIRITU.M_ZEIRITUKeyDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:KeihiWeb.DS_M_ZEIRITU.M_ZEIRITURow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:KeihiWeb.DS_M_ZEIRITU.M_ZEIRITUKeyRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:KeihiWeb.DS_M_ZEIRITU.M_ZEIRITURowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:KeihiWeb.DS_M_ZEIRITU.M_ZEIRITUKeyRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:KeihiWeb.DS_PAYMENT">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+<member name="T:KeihiWeb.DS_PAYMENT.CT_PAYMENT1DataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:KeihiWeb.DS_PAYMENT.CT_PAYMENT2DataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:KeihiWeb.DS_PAYMENT.SearchParamDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:KeihiWeb.DS_PAYMENT.RPT_KAMOKUBETUDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:KeihiWeb.DS_PAYMENT.CT_PAYMENT1_DENPYODataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:KeihiWeb.DS_PAYMENT.CT_SELECTPAYMENTDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:KeihiWeb.DS_PAYMENT.SearchParam_ListDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:KeihiWeb.DS_PAYMENT.RPT_SUITOUDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:KeihiWeb.DS_PAYMENT.CT_HEADER_DISPDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:KeihiWeb.DS_PAYMENT.CT_MEISAI_DISPDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:KeihiWeb.DS_PAYMENT.CT_PAYMENT1Row">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:KeihiWeb.DS_PAYMENT.CT_PAYMENT2Row">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:KeihiWeb.DS_PAYMENT.SearchParamRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:KeihiWeb.DS_PAYMENT.RPT_KAMOKUBETURow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:KeihiWeb.DS_PAYMENT.CT_PAYMENT1_DENPYORow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:KeihiWeb.DS_PAYMENT.CT_SELECTPAYMENTRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:KeihiWeb.DS_PAYMENT.SearchParam_ListRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:KeihiWeb.DS_PAYMENT.RPT_SUITOURow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:KeihiWeb.DS_PAYMENT.CT_HEADER_DISPRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:KeihiWeb.DS_PAYMENT.CT_MEISAI_DISPRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:KeihiWeb.DS_PAYMENT.CT_PAYMENT1RowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:KeihiWeb.DS_PAYMENT.CT_PAYMENT2RowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:KeihiWeb.DS_PAYMENT.SearchParamRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:KeihiWeb.DS_PAYMENT.RPT_KAMOKUBETURowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:KeihiWeb.DS_PAYMENT.CT_PAYMENT1_DENPYORowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:KeihiWeb.DS_PAYMENT.CT_SELECTPAYMENTRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:KeihiWeb.DS_PAYMENT.SearchParam_ListRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:KeihiWeb.DS_PAYMENT.RPT_SUITOURowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:KeihiWeb.DS_PAYMENT.CT_HEADER_DISPRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:KeihiWeb.DS_PAYMENT.CT_MEISAI_DISPRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:KeihiWeb.DS_PAYMENTTableAdapters.CT_PAYMENT1TableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:KeihiWeb.DS_PAYMENTTableAdapters.CT_PAYMENT2TableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:KeihiWeb.DS_PAYMENTTableAdapters.TableAdapterManager">
+<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member>
+<member name="M:KeihiWeb.DS_PAYMENTTableAdapters.TableAdapterManager.UpdateUpdatedRows(KeihiWeb.DS_PAYMENT,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Update rows in top-down order.
+</summary>
+</member>
+<member name="M:KeihiWeb.DS_PAYMENTTableAdapters.TableAdapterManager.UpdateInsertedRows(KeihiWeb.DS_PAYMENT,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Insert rows in top-down order.
+</summary>
+</member>
+<member name="M:KeihiWeb.DS_PAYMENTTableAdapters.TableAdapterManager.UpdateDeletedRows(KeihiWeb.DS_PAYMENT,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Delete rows in bottom-up order.
+</summary>
+</member>
+<member name="M:KeihiWeb.DS_PAYMENTTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member>
+<member name="M:KeihiWeb.DS_PAYMENTTableAdapters.TableAdapterManager.UpdateAll(KeihiWeb.DS_PAYMENT)">
+<summary>
+Update all changes to the dataset.
+</summary>
+</member>
+<member name="T:KeihiWeb.DS_PAYMENTTableAdapters.TableAdapterManager.UpdateOrderOption">
+<summary>
+Update Order Option
+</summary>
+</member>
+<member name="T:KeihiWeb.DS_PAYMENTTableAdapters.TableAdapterManager.SelfReferenceComparer">
+<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member>
+<member name="T:KeihiWeb.M_BUMON">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+<member name="T:KeihiWeb.M_BUMON.M_BUMONDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:KeihiWeb.M_BUMON.M_BUMON_SHIME_INFODataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:KeihiWeb.M_BUMON.M_BUMONRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:KeihiWeb.M_BUMON.M_BUMON_SHIME_INFORow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:KeihiWeb.M_BUMON.M_BUMONRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:KeihiWeb.M_BUMON.M_BUMON_SHIME_INFORowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:KeihiWeb.M_USER">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+<member name="T:KeihiWeb.M_USER.M_USERDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:KeihiWeb.M_USER.M_USERRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:KeihiWeb.M_USER.M_USERRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="F:KeihiWeb._Default._menu">
+<summary>
+menu コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb._Default._LabelMessage">
+<summary>
+LabelMessage コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="M:KeihiWeb.Enty.Ety_AUTH.GetAuthInfo(System.String,System.String)">
+ <summary>
+ 認証情報を取得する
+ </summary>
+ <param name="vId">ユーザーID</param>
+ <param name="vPass">パスワード</param>
+ <returns></returns>
+</member>
+<member name="F:KeihiWeb.Enty.Ety_Base.pConnString">
+ <summary>
+ データベース接続文字列(レプリカ)
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:KeihiWeb.Enty.Ety_Base.pConnObj">
+ <summary>
+ データベース接続情報コレクション(レプリカ)
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:KeihiWeb.Enty.Ety_CT_BILL1.GetRptData_Shiwake(KeihiWeb.Report.Rpt_SeikyuShiwake.RptParam)">
+ <summary>
+ 請求入力仕訳データを取得する
+ </summary>
+ <param name="vParam">帳票パラメータ</param>
+ <returns></returns>
+</member>
+<member name="M:KeihiWeb.Enty.Ety_CT_CLOSE.GetZandakaRec(System.String,System.String,System.Int32)">
+ <summary>
+ 締めテーブルより残高を取得する
+ </summary>
+ <param name="vJibumonCd">自部門コード</param>
+ <param name="vCloseDate">締日</param>
+ <param name="vClassNo">業務種別　１：出納帳（省略時）　２：請求書</param>
+ <returns></returns>
+</member>
+<member name="M:KeihiWeb.Enty.Ety_CT_CLOSE.GetLastShimebi(System.String,System.Int32)">
+ <summary>
+ 最終締日を取得する
+ </summary>
+ <param name="vJibumonCd">自部門コード</param>
+ <param name="vClassNo">業務種別　１：出納帳（省略時）　２：請求書</param>
+ <returns></returns>
+</member>
+<member name="M:KeihiWeb.Enty.Ety_CT_CLOSE.ZandakaCalc(System.String,System.String)">
+ <summary>
+ 当期残高を算出する
+ </summary>
+ <param name="vDate">対象日</param>
+ <returns></returns>
+</member>
+<member name="M:KeihiWeb.Enty.Ety_CT_CLOSE.IsOutputGlovia(System.String,System.Int32,System.String)">
+ <summary>
+ GLOVIA出力済みか確認する
+ </summary>
+ <param name="vJibumonCd"></param>
+ <param name="vClassNo"></param>
+ <param name="vCloseDate"></param>
+ <returns>True:出力済み　Flase:未出力</returns>
+</member>
+<member name="M:KeihiWeb.Enty.Ety_CT_CLOSE.UpdateOutputGlovia(System.Data.SqlClient.SqlConnection@,System.Data.SqlClient.SqlCommand@,KeihiWeb.DS_CT_CLOSE.CT_CLOSEDataTable)">
+ <summary>
+ GLOVIA出力済みフラグを更新する（CANCEL_FLG=2）
+ </summary>
+ <param name="rDb">DB接続オブジェクト</param>
+ <param name="rCmd">コマンドオブジェクト</param>
+ <param name="vDt">データテーブル</param>
+ <returns></returns>
+</member>
+<member name="M:KeihiWeb.Enty.Ety_CT_PAYMENT1.GetRptData_KamokuBetsu(KeihiWeb.Report.Rpt_Suitou_KamokuBetsu.RptParam)">
+ <summary>
+ 現金出納科目別集計表
+ </summary>
+ <param name="vParam"></param>
+ <returns></returns>
+</member>
+<member name="M:KeihiWeb.Enty.Ety_CT_PAYMENT1.GetRptData_Suitou(KeihiWeb.Report.Rpt_Suitou.RptParam)">
+ <summary>
+ 現金出納帳
+ </summary>
+ <param name="vParam"></param>
+ <returns></returns>
+</member>
+<member name="M:KeihiWeb.Enty.Ety_GLOVIA.GetConvData_Suitou(System.String,System.String,System.String)">
+ <summary>
+ GLOVIA出力する出納帳のデータを集計する
+ </summary>
+ <param name="vJibumonCd">自部門コード</param>
+ <param name="vStartDate">締日開始日</param>
+ <param name="vEndDate">締日終了日</param>
+ <returns></returns>
+</member>
+<member name="M:KeihiWeb.Enty.Ety_GLOVIA.GetConvData_Suitou_Freee(System.String,System.String,System.String)">
+ <summary>
+ Freee出力する出納帳のデータを集計する
+ </summary>
+ <param name="vJibumonCd">自部門コード</param>
+ <param name="vStartDate">締日開始日</param>
+ <param name="vEndDate">締日終了日</param>
+ <returns></returns>
+</member>
+<member name="M:KeihiWeb.Enty.Ety_GLOVIA.GetConvData_Seikyu(System.String,System.String,System.String)">
+ <summary>
+ GLOVIA出力する請求書のデータを取得する
+ </summary>
+ <param name="vJibumonCd">自部門コード</param>
+ <param name="vStartDate">締日開始日</param>
+ <param name="vEndDate">締日終了日</param>
+ <returns></returns>
+</member>
+<member name="M:KeihiWeb.Enty.Ety_M_BUMON.GetShimeInfo(System.String,System.Int32)">
+ <summary>
+ 部門締め情報を取得する
+ </summary>
+ <param name="vCloseDate">締日</param>
+ <param name="vClassNo">業務種別　1:出納帳　2:請求書</param>
+ <returns></returns>
+</member>
+<member name="M:KeihiWeb.Enty.Ety_M_MENU.SelectData(System.String,System.String)">
+ <summary>
+ IWViewerメニュー情報を取得する
+ </summary>
+ <param name="vParentNo">親No</param>
+ <param name="vPrivilege">権限</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:KeihiWeb.Enty.Ety_M_MENU.GetMenuData(System.String,System.String)">
+ <summary>
+ メニュー番号を基にメニュー情報を取得する
+ </summary>
+ <param name="vMenuNo">メニュー番号</param>
+ <param name="vPrivilege">権限</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:KeihiWeb.Enty.Ety_M_MENU.GetForm(System.String,System.String)">
+ <summary>
+ 画面情報を取得する
+ </summary>
+ <param name="vFormId">フォームID</param>
+ <param name="vPrivilege">権限</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:KeihiWeb.Enty.Ety_M_MENU.IsDispAuthFlg(System.String)">
+ <summary>
+ 権限管理されているメニューであればTrue
+ </summary>
+ <param name="vMenuNo">メニュー番号</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:KeihiWeb.Enty.Ety_M_MENU.GetMenuNo(System.String)">
+ <summary>
+ フォームIDからメニュー番号を取得する
+ </summary>
+ <param name="vFormId">フォームID</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:KeihiWeb.Enty.Ety_M_USER.GetUserLevel(System.String)">
+ <summary>
+ ユーザーレベルを取得する
+ </summary>
+ <param name="vUserId">担当者コード</param>
+ <returns></returns>
+</member>
+<member name="M:KeihiWeb.Enty.Ety_CT_PAYMENT2.SumKingaku(System.String,System.String,System.String,System.Int32)">
+ <summary>
+ 
+ </summary>
+ <param name="vJibumonCd">自部門コード</param>
+ <param name="vStartDate">開始日</param>
+ <param name="vEndDate">終了日</param>
+ <param name="vSlipFlg">伝票種別　1:入金　2:出金</param>
+ <returns></returns>
+</member>
+<member name="F:KeihiWeb.Login._form1">
+<summary>
+form1 コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Login._txtUserID">
+<summary>
+txtUserID コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Login._txtPassword">
+<summary>
+txtPassword コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Login._cmdLogin">
+<summary>
+cmdLogin コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Login._cmdPassChange">
+<summary>
+cmdPassChange コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Login._LabelMessage">
+<summary>
+LabelMessage コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="T:KeihiWeb.My.MyWebExtension">
+ <summary>
+ Web プロジェクトの My Namespace で使用できるプロパティを定義するためのモジュール。
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="P:KeihiWeb.My.MyWebExtension.Computer">
+ <summary>
+ ホスト コンピューターに関する情報を返します。
+ </summary>
+</member>
+<member name="P:KeihiWeb.My.MyWebExtension.User">
+ <summary>
+ 現在の Web ユーザーに関する情報を返します。
+ </summary>
+</member>
+<member name="P:KeihiWeb.My.MyWebExtension.Request">
+ <summary>
+ Request オブジェクトを返します。
+ </summary>
+</member>
+<member name="P:KeihiWeb.My.MyWebExtension.Response">
+ <summary>
+ Response オブジェクトを返します。
+ </summary>
+</member>
+<member name="P:KeihiWeb.My.MyWebExtension.Log">
+ <summary>
+ Asp ログ オブジェクトを返します。
+ </summary>
+</member>
+<member name="T:KeihiWeb.Report.Rpt_SeikyuShiwake.InitPoint">
+ <summary>
+ 明細開始位置
+ </summary>
+</member>
+<member name="T:KeihiWeb.Report.Rpt_SeikyuShiwake.RptTitle">
+ <summary>
+ レポート名締め前には（仮）を出力する
+ </summary>
+</member>
+<member name="T:KeihiWeb.Report.Rpt_SeikyuShiwake.RptParam">
+ <summary>
+ 請求入力仕訳出力パラメータ
+ </summary>
+</member>
+<member name="F:KeihiWeb.Report.Rpt_SeikyuShiwake._Dt">
+ <summary>
+ 請求入力仕訳データ
+ </summary>
+</member>
+<member name="F:KeihiWeb.Report.Rpt_SeikyuShiwake._TemplateFile">
+ <summary>
+ 帳票テンプレート
+ </summary>
+</member>
+<member name="M:KeihiWeb.Report.Rpt_SeikyuShiwake.#ctor(KeihiWeb.Report.Rpt_SeikyuShiwake.RptParam)">
+ <summary>
+ 帳票出力のコンストラクタ
+ </summary>
+ <param name="vParam"></param>
+</member>
+<member name="M:KeihiWeb.Report.Rpt_SeikyuShiwake.Output(System.String)">
+ <summary>
+ 現金出納帳出力
+ </summary>
+ <param name="vOutputPath"></param>
+</member>
+<member name="T:KeihiWeb.Report.Rpt_Suitou.InitPoint">
+ <summary>
+ 明細開始位置
+ </summary>
+</member>
+<member name="T:KeihiWeb.Report.Rpt_Suitou.RptTitle">
+ <summary>
+ レポート名締め前には（仮）を出力する
+ </summary>
+</member>
+<member name="T:KeihiWeb.Report.Rpt_Suitou.RptParam">
+ <summary>
+ 現金出納帳出力パラメータ
+ </summary>
+</member>
+<member name="F:KeihiWeb.Report.Rpt_Suitou._Dt">
+ <summary>
+ 科目別集計データ
+ </summary>
+</member>
+<member name="F:KeihiWeb.Report.Rpt_Suitou._Zandaka">
+ <summary>
+ 前回繰越金
+ </summary>
+</member>
+<member name="F:KeihiWeb.Report.Rpt_Suitou._TemplateFile">
+ <summary>
+ 帳票テンプレート
+ </summary>
+</member>
+<member name="M:KeihiWeb.Report.Rpt_Suitou.#ctor(KeihiWeb.Report.Rpt_Suitou.RptParam)">
+ <summary>
+ 帳票出力のコンストラクタ
+ </summary>
+ <param name="vParam"></param>
+</member>
+<member name="M:KeihiWeb.Report.Rpt_Suitou.Output(System.String)">
+ <summary>
+ 現金出納帳出力
+ </summary>
+ <param name="vOutputPath"></param>
+</member>
+<member name="T:KeihiWeb.Report.Rpt_Suitou_KamokuBetsu.RptStatus">
+ <summary>
+ 締め前には（仮）を出力する
+ </summary>
+</member>
+<member name="T:KeihiWeb.Report.Rpt_Suitou_KamokuBetsu.RptParam">
+ <summary>
+ 科目別集計表出力パラメータ
+ </summary>
+</member>
+<member name="F:KeihiWeb.Report.Rpt_Suitou_KamokuBetsu._Dt">
+ <summary>
+ 科目別集計データ
+ </summary>
+</member>
+<member name="F:KeihiWeb.Report.Rpt_Suitou_KamokuBetsu._Zandaka">
+ <summary>
+ 前回繰越金
+ </summary>
+</member>
+<member name="F:KeihiWeb.Report.Rpt_Suitou_KamokuBetsu._TemplateFile">
+ <summary>
+ 帳票テンプレート
+ </summary>
+</member>
+<member name="M:KeihiWeb.Report.Rpt_Suitou_KamokuBetsu.#ctor(KeihiWeb.Report.Rpt_Suitou_KamokuBetsu.RptParam)">
+ <summary>
+ 帳票出力のコンストラクタ
+ </summary>
+ <param name="vParam"></param>
+</member>
+<member name="M:KeihiWeb.Report.Rpt_Suitou_KamokuBetsu.Output(System.String)">
+ <summary>
+ 科目別集計表出力
+ </summary>
+ <param name="vOutputPath"></param>
+</member>
+<member name="F:KeihiWeb.Form_Freee_SEIKYU._txtNen">
+<summary>
+txtNen コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_Freee_SEIKYU._txtTuki">
+<summary>
+txtTuki コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_Freee_SEIKYU._txtShimeDate">
+<summary>
+txtShimeDate コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_Freee_SEIKYU._btnPrev">
+<summary>
+btnPrev コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_Freee_SEIKYU._btnNext">
+<summary>
+btnNext コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_Freee_SEIKYU._Panel1">
+<summary>
+Panel1 コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_Freee_SEIKYU._ListView1">
+<summary>
+ListView1 コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_Freee_SEIKYU._btnClose">
+<summary>
+btnClose コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_Freee_SEIKYU._Literal2">
+<summary>
+Literal2 コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_Freee_SEIKYU._LabelMessage">
+<summary>
+LabelMessage コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="M:KeihiWeb.Form_Freee_SEIKYU.DispData">
+ <summary>
+ 部門情報を表示する
+ </summary>
+</member>
+<member name="M:KeihiWeb.Form_Freee_SEIKYU.SetInit(System.String,System.DateTime)">
+ <summary>
+ 画面を初期化する
+ </summary>
+ <param name="vJibumonCd">自部門コード</param>
+ <param name="vShimebi">締日</param>
+</member>
+<member name="F:KeihiWeb.Form_Freee_SUITOU._txtNen">
+<summary>
+txtNen コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_Freee_SUITOU._txtTuki">
+<summary>
+txtTuki コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_Freee_SUITOU._radio15">
+<summary>
+radio15 コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_Freee_SUITOU._radio31">
+<summary>
+radio31 コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_Freee_SUITOU._txtShimeDate">
+<summary>
+txtShimeDate コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_Freee_SUITOU._btnPrev">
+<summary>
+btnPrev コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_Freee_SUITOU._btnNext">
+<summary>
+btnNext コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_Freee_SUITOU._Panel1">
+<summary>
+Panel1 コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_Freee_SUITOU._ListView1">
+<summary>
+ListView1 コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_Freee_SUITOU._Literal2">
+<summary>
+Literal2 コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_Freee_SUITOU._btnClose">
+<summary>
+btnClose コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_Freee_SUITOU._LabelMessage">
+<summary>
+LabelMessage コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="M:KeihiWeb.Form_Freee_SUITOU.DispData">
+ <summary>
+ 部門情報を表示する
+ </summary>
+</member>
+<member name="M:KeihiWeb.Form_Freee_SUITOU.SetInit(System.String,System.DateTime)">
+ <summary>
+ 画面を初期化する
+ </summary>
+ <param name="vJibumonCd">自部門コード</param>
+ <param name="vShimebi">締日</param>
+</member>
+<member name="F:KeihiWeb.Form_M_TRADE._Panel1">
+<summary>
+Panel1 コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_M_TRADE._GridView1">
+<summary>
+GridView1 コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_M_TRADE._newtrade">
+<summary>
+newtrade コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_M_TRADE._edittrade">
+<summary>
+edittrade コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_M_TRADE._deltrade">
+<summary>
+deltrade コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_M_TRADE._closetrade">
+<summary>
+closetrade コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_M_UCHIWAKE._Panel1">
+<summary>
+Panel1 コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_M_UCHIWAKE._GridView1">
+<summary>
+GridView1 コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_M_UCHIWAKE._newuchiwake">
+<summary>
+newuchiwake コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_M_UCHIWAKE._edituchiwake">
+<summary>
+edituchiwake コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_M_UCHIWAKE._deluchiwake">
+<summary>
+deluchiwake コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_M_UCHIWAKE._closeuchiwake">
+<summary>
+closeuchiwake コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_NYKINDN_List._h_date_from">
+<summary>
+h_date_from コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_NYKINDN_List._h_date_to">
+<summary>
+h_date_to コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_NYKINDN_List._h_shaincd">
+<summary>
+h_shaincd コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_NYKINDN_List._h_shainname">
+<summary>
+h_shainname コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_NYKINDN_List._auth_user_id">
+<summary>
+auth_user_id コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_NYKINDN_List._auth_user_name">
+<summary>
+auth_user_name コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_NYKINDN_List._syubetu">
+<summary>
+syubetu コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_NYKINDN_List._date_from">
+<summary>
+date_from コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_NYKINDN_List._date_to">
+<summary>
+date_to コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_NYKINDN_List._disp">
+<summary>
+disp コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_NYKINDN_List._input_date1">
+<summary>
+input_date1 コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_NYKINDN_List._input_date2">
+<summary>
+input_date2 コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_NYKINDN_List._d_shiharai">
+<summary>
+d_shiharai コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_NYKINDN_List._SearchButton">
+<summary>
+SearchButton コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_NYKINDN_List._SearchClear">
+<summary>
+SearchClear コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_NYKINDN_List._Change_disp">
+<summary>
+Change_disp コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_NYKINDN_List._Panel1">
+<summary>
+Panel1 コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_NYKINDN_List._GridView1">
+<summary>
+GridView1 コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_NYKINDN_List._GridView2">
+<summary>
+GridView2 コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_NYKINDN_List._Panel2">
+<summary>
+Panel2 コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_NYKINDN_List._Button_Disp">
+<summary>
+Button_Disp コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_NYKINDN_List._btnClose">
+<summary>
+btnClose コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_NYKINDN_New._h_maxgyo">
+<summary>
+h_maxgyo コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_NYKINDN_New._keihi_goukei">
+<summary>
+keihi_goukei コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_NYKINDN_New._zei_goukei">
+<summary>
+zei_goukei コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_NYKINDN_New._kin_goukei">
+<summary>
+kin_goukei コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_NYKINDN_New._auth_user_id">
+<summary>
+auth_user_id コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_NYKINDN_New._auth_user_name">
+<summary>
+auth_user_name コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_NYKINDN_New._jibumoncd">
+<summary>
+jibumoncd コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_NYKINDN_New._manageno">
+<summary>
+manageno コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_NYKINDN_New._syubetu">
+<summary>
+syubetu コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_NYKINDN_New._after_input_date">
+<summary>
+after_input_date コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_NYKINDN_New._denban1">
+<summary>
+denban1 コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_NYKINDN_New._h_denban">
+<summary>
+h_denban コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_NYKINDN_New._zandaka">
+<summary>
+zandaka コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_NYKINDN_New._kounyu_date">
+<summary>
+kounyu_date コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_NYKINDN_New._Panel1">
+<summary>
+Panel1 コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_NYKINDN_New._GridView1">
+<summary>
+GridView1 コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_NYKINDN_New._Panel2">
+<summary>
+Panel2 コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_NYKINDN_New._keihi_goukeiran">
+<summary>
+keihi_goukeiran コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_NYKINDN_New._zei_goukeiran">
+<summary>
+zei_goukeiran コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_NYKINDN_New._kin_goukeiran">
+<summary>
+kin_goukeiran コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_NYKINDN_New._gyo_new">
+<summary>
+gyo_new コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_NYKINDN_New._gyo_del">
+<summary>
+gyo_del コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_NYKINDN_New._button_kousin">
+<summary>
+button_kousin コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_NYKINDN_New._button_delete">
+<summary>
+button_delete コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_NYKINDN_New._btnClose">
+<summary>
+btnClose コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_NYKINDN_New._msgbox">
+<summary>
+msgbox コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_NYKINDN_New._move_itiran">
+<summary>
+move_itiran コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_NYKINDN_New._gyo_insert">
+<summary>
+gyo_insert コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.SiteMaster._HeaderPlaceHolder1">
+<summary>
+HeaderPlaceHolder1 コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.SiteMaster._lblBumonName">
+<summary>
+lblBumonName コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.SiteMaster._lblLoginUser">
+<summary>
+lblLoginUser コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.SiteMaster._auth_user_id">
+<summary>
+auth_user_id コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.SiteMaster._auth_user_name">
+<summary>
+auth_user_name コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.SiteMaster._auth_user_kana">
+<summary>
+auth_user_kana コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.SiteMaster._auth_user_level">
+<summary>
+auth_user_level コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.SiteMaster._auth_bumon_cd">
+<summary>
+auth_bumon_cd コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.SiteMaster._MainContent">
+<summary>
+MainContent コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Site_Mobile._Head1">
+<summary>
+Head1 コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Site_Mobile._HeadContent">
+<summary>
+HeadContent コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Site_Mobile._form1">
+<summary>
+form1 コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Site_Mobile._FeaturedContent">
+<summary>
+FeaturedContent コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Site_Mobile._MainContent">
+<summary>
+MainContent コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Site_Mobile._ViewSwitcher1">
+<summary>
+ViewSwitcher1 コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.FileDL._form1">
+<summary>
+form1 コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_GLOVIA_SEIKYU._txtNen">
+<summary>
+txtNen コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_GLOVIA_SEIKYU._txtTuki">
+<summary>
+txtTuki コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_GLOVIA_SEIKYU._txtShimeDate">
+<summary>
+txtShimeDate コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_GLOVIA_SEIKYU._btnPrev">
+<summary>
+btnPrev コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_GLOVIA_SEIKYU._btnNext">
+<summary>
+btnNext コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_GLOVIA_SEIKYU._Panel1">
+<summary>
+Panel1 コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_GLOVIA_SEIKYU._ListView1">
+<summary>
+ListView1 コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_GLOVIA_SEIKYU._btnClose">
+<summary>
+btnClose コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_GLOVIA_SEIKYU._Literal2">
+<summary>
+Literal2 コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_GLOVIA_SEIKYU._LabelMessage">
+<summary>
+LabelMessage コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="M:KeihiWeb.Form_GLOVIA_SEIKYU.DispData">
+ <summary>
+ 部門情報を表示する
+ </summary>
+</member>
+<member name="M:KeihiWeb.Form_GLOVIA_SEIKYU.SetInit(System.String,System.DateTime)">
+ <summary>
+ 画面を初期化する
+ </summary>
+ <param name="vJibumonCd">自部門コード</param>
+ <param name="vShimebi">締日</param>
+</member>
+<member name="F:KeihiWeb.Form_M_BUMON._Panel1">
+<summary>
+Panel1 コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_M_BUMON._GridView1">
+<summary>
+GridView1 コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_M_BUMON._newbumon">
+<summary>
+newbumon コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_M_BUMON._editbumon">
+<summary>
+editbumon コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_M_BUMON._delbumon">
+<summary>
+delbumon コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_M_BUMON._closebumon">
+<summary>
+closebumon コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_M_KAMOKU._Panel1">
+<summary>
+Panel1 コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_M_KAMOKU._GridView1">
+<summary>
+GridView1 コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_M_KAMOKU._newkamoku">
+<summary>
+newkamoku コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_M_KAMOKU._editkamoku">
+<summary>
+editkamoku コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_M_KAMOKU._delkamoku">
+<summary>
+delkamoku コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_M_KAMOKU._closekamoku">
+<summary>
+closekamoku コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_M_USER._Panel1">
+<summary>
+Panel1 コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_M_USER._GridView1">
+<summary>
+GridView1 コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_M_USER._newuser">
+<summary>
+newuser コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_M_USER._edituser">
+<summary>
+edituser コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_M_USER._deluser">
+<summary>
+deluser コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_M_USER._closeuser">
+<summary>
+closeuser コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_M_ZEIRITU._Panel1">
+<summary>
+Panel1 コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_M_ZEIRITU._GridView1">
+<summary>
+GridView1 コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_M_ZEIRITU._newzei">
+<summary>
+newzei コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_M_ZEIRITU._editzei">
+<summary>
+editzei コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_M_ZEIRITU._deluser">
+<summary>
+deluser コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_M_ZEIRITU._closezei">
+<summary>
+closezei コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_M_ZEIRITU._old_bunrui">
+<summary>
+old_bunrui コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_M_ZEIRITU._old_startdate">
+<summary>
+old_startdate コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_M_ZEIRITU._old_enddate">
+<summary>
+old_enddate コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_Print_Seikyu._txtStartDate">
+<summary>
+txtStartDate コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_Print_Seikyu._txtEndDate">
+<summary>
+txtEndDate コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_Print_Seikyu._btnShiwake">
+<summary>
+btnShiwake コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_Print_Seikyu._btnClose">
+<summary>
+btnClose コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_Print_Seikyu._LabelMessage">
+<summary>
+LabelMessage コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_Print_SUITOU._txtStartDate">
+<summary>
+txtStartDate コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_Print_SUITOU._txtEndDate">
+<summary>
+txtEndDate コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_Print_SUITOU._btnSuitoucho">
+<summary>
+btnSuitoucho コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_Print_SUITOU._btnMeisai">
+<summary>
+btnMeisai コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_Print_SUITOU._btnClose">
+<summary>
+btnClose コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_Print_SUITOU._LabelMessage">
+<summary>
+LabelMessage コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_SEIKYUDN_List._h_date_from">
+<summary>
+h_date_from コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_SEIKYUDN_List._h_date_to">
+<summary>
+h_date_to コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_SEIKYUDN_List._h_tradecd">
+<summary>
+h_tradecd コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_SEIKYUDN_List._h_tradename">
+<summary>
+h_tradename コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_SEIKYUDN_List._h_tradeaddress">
+<summary>
+h_tradeaddress コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_SEIKYUDN_List._auth_user_id">
+<summary>
+auth_user_id コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_SEIKYUDN_List._auth_user_name">
+<summary>
+auth_user_name コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_SEIKYUDN_List._syubetu">
+<summary>
+syubetu コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_SEIKYUDN_List._date_from">
+<summary>
+date_from コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_SEIKYUDN_List._date_to">
+<summary>
+date_to コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_SEIKYUDN_List._disp">
+<summary>
+disp コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_SEIKYUDN_List._input_date1">
+<summary>
+input_date1 コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_SEIKYUDN_List._input_date2">
+<summary>
+input_date2 コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_SEIKYUDN_List._SearchButton">
+<summary>
+SearchButton コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_SEIKYUDN_List._SearchClear">
+<summary>
+SearchClear コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_SEIKYUDN_List._Change_disp">
+<summary>
+Change_disp コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_SEIKYUDN_List._Panel1">
+<summary>
+Panel1 コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_SEIKYUDN_List._GridView1">
+<summary>
+GridView1 コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_SEIKYUDN_List._GridView2">
+<summary>
+GridView2 コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_SEIKYUDN_List._Panel2">
+<summary>
+Panel2 コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_SEIKYUDN_List._Button_Disp">
+<summary>
+Button_Disp コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_SEIKYUDN_List._btnClose">
+<summary>
+btnClose コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_SEIKYUDN_New._h_maxgyo">
+<summary>
+h_maxgyo コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_SEIKYUDN_New._keihi_goukei">
+<summary>
+keihi_goukei コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_SEIKYUDN_New._zei_goukei">
+<summary>
+zei_goukei コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_SEIKYUDN_New._kin_goukei">
+<summary>
+kin_goukei コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_SEIKYUDN_New._h_trade_cd">
+<summary>
+h_trade_cd コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_SEIKYUDN_New._h_trade_name">
+<summary>
+h_trade_name コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_SEIKYUDN_New._h_trade_address">
+<summary>
+h_trade_address コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_SEIKYUDN_New._h_cir_no">
+<summary>
+h_cir_no コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_SEIKYUDN_New._after_input_date">
+<summary>
+after_input_date コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_SEIKYUDN_New._auth_user_id">
+<summary>
+auth_user_id コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_SEIKYUDN_New._auth_user_name">
+<summary>
+auth_user_name コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_SEIKYUDN_New._jibumoncd">
+<summary>
+jibumoncd コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_SEIKYUDN_New._manageno">
+<summary>
+manageno コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_SEIKYUDN_New._syubetu">
+<summary>
+syubetu コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_SEIKYUDN_New._denban1">
+<summary>
+denban1 コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_SEIKYUDN_New._h_denban">
+<summary>
+h_denban コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_SEIKYUDN_New._kounyu_date">
+<summary>
+kounyu_date コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_SEIKYUDN_New._Panel1">
+<summary>
+Panel1 コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_SEIKYUDN_New._GridView1">
+<summary>
+GridView1 コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_SEIKYUDN_New._Panel2">
+<summary>
+Panel2 コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_SEIKYUDN_New._keihi_goukeiran">
+<summary>
+keihi_goukeiran コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_SEIKYUDN_New._zei_goukeiran">
+<summary>
+zei_goukeiran コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_SEIKYUDN_New._kin_goukeiran">
+<summary>
+kin_goukeiran コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_SEIKYUDN_New._gyo_new">
+<summary>
+gyo_new コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_SEIKYUDN_New._gyo_del">
+<summary>
+gyo_del コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_SEIKYUDN_New._button_kousin">
+<summary>
+button_kousin コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_SEIKYUDN_New._button_delete">
+<summary>
+button_delete コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_SEIKYUDN_New._btnClose">
+<summary>
+btnClose コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_SEIKYUDN_New._msgbox">
+<summary>
+msgbox コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_SEIKYUDN_New._move_itiran">
+<summary>
+move_itiran コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_SEIKYUDN_New._gyo_insert">
+<summary>
+gyo_insert コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_SHIME_SEIKYU._radioShime">
+<summary>
+radioShime コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_SHIME_SEIKYU._radioCancel">
+<summary>
+radioCancel コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_SHIME_SEIKYU._txtNen">
+<summary>
+txtNen コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_SHIME_SEIKYU._txtTuki">
+<summary>
+txtTuki コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_SHIME_SEIKYU._txtShimeDate">
+<summary>
+txtShimeDate コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_SHIME_SEIKYU._chkPrint">
+<summary>
+chkPrint コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_SHIME_SEIKYU._btnPrev">
+<summary>
+btnPrev コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_SHIME_SEIKYU._btnNext">
+<summary>
+btnNext コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_SHIME_SEIKYU._btnExec">
+<summary>
+btnExec コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_SHIME_SEIKYU._btnClose">
+<summary>
+btnClose コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_SHIME_SEIKYU._Literal2">
+<summary>
+Literal2 コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_SHIME_SEIKYU._LabelMessage">
+<summary>
+LabelMessage コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="M:KeihiWeb.Form_SHIME_SEIKYU.SetInit(System.String,System.DateTime,System.Int32)">
+ <summary>
+ 画面を初期化する
+ </summary>
+ <param name="vJibumonCd">自部門コード</param>
+ <param name="vShimebi">締日</param>
+ <param name="vSyoriFlg">1:締め処理　0:取消</param>
+</member>
+<member name="F:KeihiWeb.Form_SHIME_SUITOU._radioShime">
+<summary>
+radioShime コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_SHIME_SUITOU._radioCancel">
+<summary>
+radioCancel コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_SHIME_SUITOU._txtNen">
+<summary>
+txtNen コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_SHIME_SUITOU._txtTuki">
+<summary>
+txtTuki コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_SHIME_SUITOU._radio15">
+<summary>
+radio15 コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_SHIME_SUITOU._radio31">
+<summary>
+radio31 コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_SHIME_SUITOU._txtShimeDate">
+<summary>
+txtShimeDate コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_SHIME_SUITOU._chkPrint">
+<summary>
+chkPrint コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_SHIME_SUITOU._btnPrev">
+<summary>
+btnPrev コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_SHIME_SUITOU._btnNext">
+<summary>
+btnNext コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_SHIME_SUITOU._btnExec">
+<summary>
+btnExec コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_SHIME_SUITOU._btnClose">
+<summary>
+btnClose コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_SHIME_SUITOU._Literal2">
+<summary>
+Literal2 コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_SHIME_SUITOU._LabelMessage">
+<summary>
+LabelMessage コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="M:KeihiWeb.Form_SHIME_SUITOU.SetInit(System.String,System.DateTime,System.Int32)">
+ <summary>
+ 画面を初期化する
+ </summary>
+ <param name="vJibumonCd">自部門コード</param>
+ <param name="vShimebi">締日</param>
+ <param name="vSyoriFlg">1:締め処理　0:取消</param>
+</member>
+<member name="F:KeihiWeb.Form_SYIKINDN_TEST._keihi_goukei">
+<summary>
+keihi_goukei コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_SYIKINDN_TEST._zei_goukei">
+<summary>
+zei_goukei コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_SYIKINDN_TEST._kin_goukei">
+<summary>
+kin_goukei コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_SYIKINDN_TEST._auth_user_id">
+<summary>
+auth_user_id コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_SYIKINDN_TEST._auth_user_name">
+<summary>
+auth_user_name コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_SYIKINDN_TEST._jibumoncd">
+<summary>
+jibumoncd コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_SYIKINDN_TEST._manageno">
+<summary>
+manageno コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_SYIKINDN_TEST._syubetu">
+<summary>
+syubetu コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_SYIKINDN_TEST._denban1">
+<summary>
+denban1 コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_SYIKINDN_TEST._h_denban">
+<summary>
+h_denban コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_SYIKINDN_TEST._zandaka">
+<summary>
+zandaka コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_SYIKINDN_TEST._kounyu_date">
+<summary>
+kounyu_date コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_SYIKINDN_TEST._Panel1">
+<summary>
+Panel1 コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_SYIKINDN_TEST._GridView1">
+<summary>
+GridView1 コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_SYIKINDN_TEST._Panel2">
+<summary>
+Panel2 コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_SYIKINDN_TEST._keihi_goukeiran">
+<summary>
+keihi_goukeiran コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_SYIKINDN_TEST._zei_goukeiran">
+<summary>
+zei_goukeiran コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_SYIKINDN_TEST._kin_goukeiran">
+<summary>
+kin_goukeiran コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_SYIKINDN_TEST._gyo_new">
+<summary>
+gyo_new コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_SYIKINDN_TEST._gyo_del">
+<summary>
+gyo_del コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_SYIKINDN_TEST._button_kousin">
+<summary>
+button_kousin コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_SYIKINDN_TEST._button_delete">
+<summary>
+button_delete コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_SYIKINDN_TEST._btnClose">
+<summary>
+btnClose コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_SYIKINDN_TEST._msgbox">
+<summary>
+msgbox コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_SYIKINDN_TEST._move_itiran">
+<summary>
+move_itiran コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_SYIKINDN_TEST._gyo_insert">
+<summary>
+gyo_insert コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_SYIKINDN_TEST._gyo_delete">
+<summary>
+gyo_delete コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_SYKINDN_List._h_date_from">
+<summary>
+h_date_from コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_SYKINDN_List._h_date_to">
+<summary>
+h_date_to コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_SYKINDN_List._h_shaincd">
+<summary>
+h_shaincd コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_SYKINDN_List._h_shainname">
+<summary>
+h_shainname コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_SYKINDN_List._auth_user_id">
+<summary>
+auth_user_id コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_SYKINDN_List._auth_user_name">
+<summary>
+auth_user_name コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_SYKINDN_List._syubetu">
+<summary>
+syubetu コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_SYKINDN_List._date_from">
+<summary>
+date_from コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_SYKINDN_List._date_to">
+<summary>
+date_to コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_SYKINDN_List._disp">
+<summary>
+disp コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_SYKINDN_List._input_date1">
+<summary>
+input_date1 コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_SYKINDN_List._input_date2">
+<summary>
+input_date2 コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_SYKINDN_List._d_shiharai">
+<summary>
+d_shiharai コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_SYKINDN_List._SearchButton">
+<summary>
+SearchButton コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_SYKINDN_List._SearchClear">
+<summary>
+SearchClear コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_SYKINDN_List._Change_disp">
+<summary>
+Change_disp コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_SYKINDN_List._Panel1">
+<summary>
+Panel1 コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_SYKINDN_List._GridView1">
+<summary>
+GridView1 コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_SYKINDN_List._GridView2">
+<summary>
+GridView2 コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_SYKINDN_List._Panel2">
+<summary>
+Panel2 コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_SYKINDN_List._Button_Disp">
+<summary>
+Button_Disp コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_SYKINDN_List._btnClose">
+<summary>
+btnClose コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_SYKINDN_New._h_maxgyo">
+<summary>
+h_maxgyo コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_SYKINDN_New._keihi_goukei">
+<summary>
+keihi_goukei コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_SYKINDN_New._zei_goukei">
+<summary>
+zei_goukei コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_SYKINDN_New._kin_goukei">
+<summary>
+kin_goukei コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_SYKINDN_New._auth_user_id">
+<summary>
+auth_user_id コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_SYKINDN_New._auth_user_name">
+<summary>
+auth_user_name コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_SYKINDN_New._jibumoncd">
+<summary>
+jibumoncd コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_SYKINDN_New._manageno">
+<summary>
+manageno コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_SYKINDN_New._syubetu">
+<summary>
+syubetu コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_SYKINDN_New._after_input_date">
+<summary>
+after_input_date コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_SYKINDN_New._denban1">
+<summary>
+denban1 コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_SYKINDN_New._h_denban">
+<summary>
+h_denban コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_SYKINDN_New._zandaka">
+<summary>
+zandaka コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_SYKINDN_New._kounyu_date">
+<summary>
+kounyu_date コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_SYKINDN_New._Panel1">
+<summary>
+Panel1 コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_SYKINDN_New._GridView1">
+<summary>
+GridView1 コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_SYKINDN_New._Panel2">
+<summary>
+Panel2 コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_SYKINDN_New._keihi_goukeiran">
+<summary>
+keihi_goukeiran コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_SYKINDN_New._zei_goukeiran">
+<summary>
+zei_goukeiran コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_SYKINDN_New._kin_goukeiran">
+<summary>
+kin_goukeiran コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_SYKINDN_New._gyo_new">
+<summary>
+gyo_new コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_SYKINDN_New._gyo_del">
+<summary>
+gyo_del コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_SYKINDN_New._button_kousin">
+<summary>
+button_kousin コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_SYKINDN_New._button_delete">
+<summary>
+button_delete コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_SYKINDN_New._btnClose">
+<summary>
+btnClose コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_SYKINDN_New._msgbox">
+<summary>
+msgbox コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_SYKINDN_New._move_itiran">
+<summary>
+move_itiran コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_SYKINDN_New._gyo_insert">
+<summary>
+gyo_insert コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.From_BumonChange._Panel1">
+<summary>
+Panel1 コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.From_BumonChange._ListView1">
+<summary>
+ListView1 コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.From_BumonChange._btnClose">
+<summary>
+btnClose コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.From_BumonChange._LabelMessage">
+<summary>
+LabelMessage コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.From_GLOVIA_SUITOU._txtNen">
+<summary>
+txtNen コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.From_GLOVIA_SUITOU._txtTuki">
+<summary>
+txtTuki コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.From_GLOVIA_SUITOU._radio15">
+<summary>
+radio15 コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.From_GLOVIA_SUITOU._radio31">
+<summary>
+radio31 コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.From_GLOVIA_SUITOU._txtShimeDate">
+<summary>
+txtShimeDate コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.From_GLOVIA_SUITOU._btnPrev">
+<summary>
+btnPrev コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.From_GLOVIA_SUITOU._btnNext">
+<summary>
+btnNext コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.From_GLOVIA_SUITOU._Panel1">
+<summary>
+Panel1 コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.From_GLOVIA_SUITOU._ListView1">
+<summary>
+ListView1 コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.From_GLOVIA_SUITOU._Literal2">
+<summary>
+Literal2 コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.From_GLOVIA_SUITOU._btnClose">
+<summary>
+btnClose コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.From_GLOVIA_SUITOU._LabelMessage">
+<summary>
+LabelMessage コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="M:KeihiWeb.From_GLOVIA_SUITOU.DispData">
+ <summary>
+ 部門情報を表示する
+ </summary>
+</member>
+<member name="M:KeihiWeb.From_GLOVIA_SUITOU.SetInit(System.String,System.DateTime)">
+ <summary>
+ 画面を初期化する
+ </summary>
+ <param name="vJibumonCd">自部門コード</param>
+ <param name="vShimebi">締日</param>
+</member>
+<member name="F:KeihiWeb.Form_SYKINDN_New2._h_maxgyo">
+<summary>
+h_maxgyo コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_SYKINDN_New2._keihi_goukei">
+<summary>
+keihi_goukei コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_SYKINDN_New2._zei_goukei">
+<summary>
+zei_goukei コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_SYKINDN_New2._kin_goukei">
+<summary>
+kin_goukei コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_SYKINDN_New2._auth_user_id">
+<summary>
+auth_user_id コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_SYKINDN_New2._auth_user_name">
+<summary>
+auth_user_name コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_SYKINDN_New2._jibumoncd">
+<summary>
+jibumoncd コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_SYKINDN_New2._manageno">
+<summary>
+manageno コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_SYKINDN_New2._syubetu">
+<summary>
+syubetu コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_SYKINDN_New2._denban1">
+<summary>
+denban1 コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_SYKINDN_New2._h_denban">
+<summary>
+h_denban コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_SYKINDN_New2._zandaka">
+<summary>
+zandaka コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_SYKINDN_New2._kounyu_date">
+<summary>
+kounyu_date コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_SYKINDN_New2._Panel1">
+<summary>
+Panel1 コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_SYKINDN_New2._GridView1">
+<summary>
+GridView1 コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_SYKINDN_New2._Panel2">
+<summary>
+Panel2 コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_SYKINDN_New2._keihi_goukeiran">
+<summary>
+keihi_goukeiran コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_SYKINDN_New2._zei_goukeiran">
+<summary>
+zei_goukeiran コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_SYKINDN_New2._kin_goukeiran">
+<summary>
+kin_goukeiran コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_SYKINDN_New2._gyo_new">
+<summary>
+gyo_new コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_SYKINDN_New2._gyo_del">
+<summary>
+gyo_del コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_SYKINDN_New2._button_kousin">
+<summary>
+button_kousin コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_SYKINDN_New2._button_delete">
+<summary>
+button_delete コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_SYKINDN_New2._btnClose">
+<summary>
+btnClose コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_SYKINDN_New2._msgbox">
+<summary>
+msgbox コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_SYKINDN_New2._move_itiran">
+<summary>
+move_itiran コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.Form_SYKINDN_New2._gyo_insert">
+<summary>
+gyo_insert コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:KeihiWeb.MenuUC._KeihiMenu">
+<summary>
+KeihiMenu コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+</members>
+</doc>

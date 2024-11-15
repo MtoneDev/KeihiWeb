@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DS_M_ZEIRITU" targetNamespace="http://tempuri.org/DS_M_ZEIRITU.xsd" xmlns:mstns="http://tempuri.org/DS_M_ZEIRITU.xsd" xmlns="http://tempuri.org/DS_M_ZEIRITU.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="KeihiSQL_TEST" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="KeihiSQL_TEST (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.KeihiSQL_TEST.ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DS_M_ZEIRITU" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DS_M_ZEIRITU" msprop:Generator_UserDSName="DS_M_ZEIRITU">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="M_ZEIRITU" msprop:Generator_TableClassName="M_ZEIRITUDataTable" msprop:Generator_TableVarName="tableM_ZEIRITU" msprop:Generator_RowChangedName="M_ZEIRITURowChanged" msprop:Generator_TablePropName="M_ZEIRITU" msprop:Generator_RowDeletingName="M_ZEIRITURowDeleting" msprop:Generator_RowChangingName="M_ZEIRITURowChanging" msprop:Generator_RowEvHandlerName="M_ZEIRITURowChangeEventHandler" msprop:Generator_RowDeletedName="M_ZEIRITURowDeleted" msprop:Generator_RowClassName="M_ZEIRITURow" msprop:Generator_UserTableName="M_ZEIRITU" msprop:Generator_RowEvArgName="M_ZEIRITURowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="BUNRUICD" msprop:Generator_ColumnVarNameInTable="columnBUNRUICD" msprop:Generator_ColumnPropNameInRow="BUNRUICD" msprop:Generator_ColumnPropNameInTable="BUNRUICDColumn" msprop:Generator_UserColumnName="BUNRUICD">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="KIRIKAEDT" msprop:Generator_ColumnVarNameInTable="columnKIRIKAEDT" msprop:Generator_ColumnPropNameInRow="KIRIKAEDT" msprop:Generator_ColumnPropNameInTable="KIRIKAEDTColumn" msprop:Generator_UserColumnName="KIRIKAEDT" type="xs:dateTime" />
+              <xs:element name="ZEIRITU" msprop:Generator_ColumnVarNameInTable="columnZEIRITU" msprop:Generator_ColumnPropNameInRow="ZEIRITU" msprop:Generator_ColumnPropNameInTable="ZEIRITUColumn" msprop:Generator_UserColumnName="ZEIRITU" type="xs:string" minOccurs="0" />
+              <xs:element name="KIGENDT" msprop:Generator_ColumnVarNameInTable="columnKIGENDT" msprop:Generator_ColumnPropNameInRow="KIGENDT" msprop:Generator_ColumnPropNameInTable="KIGENDTColumn" msprop:Generator_UserColumnName="KIGENDT" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="M_ZEIRITUKey" msprop:Generator_TableClassName="M_ZEIRITUKeyDataTable" msprop:Generator_TableVarName="tableM_ZEIRITUKey" msprop:Generator_TablePropName="M_ZEIRITUKey" msprop:Generator_RowDeletingName="M_ZEIRITUKeyRowDeleting" msprop:Generator_RowChangingName="M_ZEIRITUKeyRowChanging" msprop:Generator_RowEvHandlerName="M_ZEIRITUKeyRowChangeEventHandler" msprop:Generator_RowDeletedName="M_ZEIRITUKeyRowDeleted" msprop:Generator_UserTableName="M_ZEIRITUKey" msprop:Generator_RowChangedName="M_ZEIRITUKeyRowChanged" msprop:Generator_RowEvArgName="M_ZEIRITUKeyRowChangeEvent" msprop:Generator_RowClassName="M_ZEIRITUKeyRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="BUNRUICD" msprop:Generator_ColumnVarNameInTable="columnBUNRUICD" msprop:Generator_ColumnPropNameInRow="BUNRUICD" msprop:Generator_ColumnPropNameInTable="BUNRUICDColumn" msprop:Generator_UserColumnName="BUNRUICD">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="INPUTDATE" msdata:Caption="KIRIKAEDT" msprop:Generator_ColumnVarNameInTable="columnINPUTDATE" msprop:Generator_ColumnPropNameInRow="INPUTDATE" msprop:Generator_ColumnPropNameInTable="INPUTDATEColumn" msprop:Generator_UserColumnName="INPUTDATE" type="xs:dateTime" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,253 @@
+﻿body {
+	/*width:1200px;*/
+	margin:10px auto;
+	position: relative;
+}
+header, nav, article, aside, section, footer {
+	border:1px solid #ccc;
+	margin:0px 0px 10px;
+	padding:10px;
+}
+header {
+	text-align:center;
+}
+nav {
+	text-align:center;
+	padding:5px;
+	}
+nav ul, nav li {
+	list-style-type:none;
+	display:inline;
+	padding:0px 10px;
+}
+nav h1 {
+	display:none;
+}
+article {
+	float:left;
+	width:50px;
+}
+aside {
+	float:right;
+	/*width:1060px;*/
+	/*width:560px;*/
+}
+footer {
+	clear:both;
+    text-align: center;
+	padding: 5px;
+	font-size: 80%;
+}
+ header, nav, article, aside, section, footer {
+    display:block;
+}
+
+#Container 
+{
+	background-color: #ffffff; /* 背景色：白 */
+	margin:10px;
+	padding:5px;
+}
+
+#button_group{
+    padding: 10px;
+}
+
+/* 非表示 */
+.hidden 
+{
+    display:none;
+}
+
+.title {
+    font-weight: bold;
+    font-size: large;
+}
+
+/* ----- Login ----- */
+div.index1 
+{
+    border-bottom-color: #660000;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-left-color: #FF0000;
+    border-left-style: solid;
+    border-left-width: 5px;
+	font-weight:bold;
+	font-size:large;
+	text-align:left;
+	color:#000000;
+	background-color:#FFCCCC;
+	padding:4px 4px 4px 10px;
+	margin-bottom:1em;
+}
+div.center
+{
+	margin: 0 auto;
+}
+
+input.command
+{
+	padding-top:2px;
+	padding-bottom:0px;
+	width:100px;
+}
+/* ---------------- */
+
+/* ----- Color -----*/
+.normalBackColor 
+{
+	background-color:#ffffff;
+}
+.requireBackColor 
+{
+	background-color:#ffc0cb;
+}
+.selectBackColor 
+{
+	background-color:#ffffcc;
+}
+.displayBackColor 
+{
+	background-color:#cccccc;
+    border:solid 1px #808080;
+}
+.errorBackColor 
+{
+	background-color:#ff0000;
+}
+.warnBackColor 
+{
+	background-color:#0000ff;
+}
+
+.normalForeColor 
+{
+	color:#000000;
+}
+.errorForeColor 
+{
+	color:#ff0000;
+}
+.warnForeColor 
+{
+	color:#0000ff;
+}
+/* ---------------- */
+
+/* --- ボックス --- */
+ div.box 
+{
+    float: left;
+    padding-right: 20px;
+}
+/* ---------------- */
+
+/* --- メニュー --- */
+#SystemMenu ul { 
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+#SystemMenu li {
+  float: left;
+  min-width: 250px;
+  white-space: nowrap;
+  display: block;
+  text-align:center;
+  padding-right:10px;	/* SystemMenu li liで設定したpaddingのずれを調整 */
+  margin-top:10px;
+}
+#SystemMenu ul ul {
+  display: none;
+  position: absolute;
+  z-index: 10;
+}
+#SystemMenu li li {
+  clear: left;
+  position:relative;
+  width: 100%;
+  margin:0px 0px 0px -2px;
+  padding: 5px 0px 0px 5px;
+  text-align:left;
+}
+
+/* メニューの回り込みを解除 */
+.clearLeft { 
+  clear: left; 
+}
+
+.clearboth {
+  clear: both;
+}
+/* ------------------------------ */
+
+/* ---メッセージ表示------------- */
+.dispmsg {
+  margin: 10px;
+  font-size: 14px;
+  line-height: 1.2;
+}
+/* ------------------------------ */
+
+.groupbox {
+  padding: 5px 10px 10px 10px;
+  margin: 10px 0px 10px 0px;
+  font-size: 14px;
+  font-weight: 200;
+  line-height: 2;
+  color: inherit;
+  background-color: #eeeeee;
+  border-radius: 10px;
+}
+
+/* ----- Fixed Detail ----- */
+table.fixdetail {
+	/* table-layout:fixed; */
+	border:1px solid #808080;
+	border-collapse:collapse;	/* 隣接する枠線を重ねる */
+}
+.fixdetail tr {
+	/*background-color:#ccffcc;*/
+}
+.fixdetail th {
+    table-layout:fixed;
+	color:#000000;
+	border:1px solid #808080;
+	background-color:#6699FF;
+	padding:2px 4px 2px 4px;
+	font-weight:normal;
+	text-align:center;
+	/*white-space:nowrap;*/
+}
+
+.mastertable td{
+    padding-left :5px;
+    padding-right:5px;
+    
+}
+.fixdetail td {
+	table-layout:fixed;
+	color:#000000;
+	border:1px solid #808080;
+	/*background-color:#ffffff;*/
+	padding:2px;
+	text-align:left;
+	/*white-space:nowrap;*/
+	word-break: break-all;
+	height:1em;
+ }
+.fixdetail tr.color1 {	/* 奇数行背景色 */
+	background-color:#FFFFFF;
+}
+	tr.color1 td {
+		background-color:#FFFFFF ;
+	}
+.fixdetail tr.color0 {	/* 偶数行背景色 */
+	background-color:#99CCCC;
+}
+	tr.color0 td {
+		background-color:#99CCCC ;
+	}
+/* ------------------------------ */
+

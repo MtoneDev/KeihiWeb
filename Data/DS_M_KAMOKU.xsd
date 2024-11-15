@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DS_M_KAMOKU" targetNamespace="http://tempuri.org/DS_M_KAMOKU.xsd" xmlns:mstns="http://tempuri.org/DS_M_KAMOKU.xsd" xmlns="http://tempuri.org/DS_M_KAMOKU.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="KeihiSQL_TEST" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="KeihiSQL_TEST (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.KeihiSQL_TEST.ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DS_M_KAMOKU" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DS_M_KAMOKU" msprop:Generator_UserDSName="DS_M_KAMOKU">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="M_KAMOKU" msprop:Generator_TableClassName="M_KAMOKUDataTable" msprop:Generator_TableVarName="tableM_KAMOKU" msprop:Generator_RowChangedName="M_KAMOKURowChanged" msprop:Generator_TablePropName="M_KAMOKU" msprop:Generator_RowDeletingName="M_KAMOKURowDeleting" msprop:Generator_RowChangingName="M_KAMOKURowChanging" msprop:Generator_RowEvHandlerName="M_KAMOKURowChangeEventHandler" msprop:Generator_RowDeletedName="M_KAMOKURowDeleted" msprop:Generator_RowClassName="M_KAMOKURow" msprop:Generator_UserTableName="M_KAMOKU" msprop:Generator_RowEvArgName="M_KAMOKURowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="KAMOKU_CD" msprop:Generator_ColumnVarNameInTable="columnKAMOKU_CD" msprop:Generator_ColumnPropNameInRow="KAMOKU_CD" msprop:Generator_ColumnPropNameInTable="KAMOKU_CDColumn" msprop:Generator_UserColumnName="KAMOKU_CD" type="xs:string" />
+              <xs:element name="KAMOKU_NM" msprop:Generator_ColumnVarNameInTable="columnKAMOKU_NM" msprop:Generator_ColumnPropNameInRow="KAMOKU_NM" msprop:Generator_ColumnPropNameInTable="KAMOKU_NMColumn" msprop:Generator_UserColumnName="KAMOKU_NM" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="16" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="KAMOKU_DISP" msprop:Generator_ColumnVarNameInTable="columnKAMOKU_DISP" msprop:Generator_ColumnPropNameInRow="KAMOKU_DISP" msprop:Generator_ColumnPropNameInTable="KAMOKU_DISPColumn" msprop:Generator_UserColumnName="KAMOKU_DISP" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="64" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FLG1" msprop:Generator_ColumnVarNameInTable="columnFLG1" msprop:Generator_ColumnPropNameInRow="FLG1" msprop:Generator_ColumnPropNameInTable="FLG1Column" msprop:Generator_UserColumnName="FLG1" type="xs:boolean" minOccurs="0" />
+              <xs:element name="FLG2" msprop:Generator_ColumnVarNameInTable="columnFLG2" msprop:Generator_ColumnPropNameInRow="FLG2" msprop:Generator_ColumnPropNameInTable="FLG2Column" msprop:Generator_UserColumnName="FLG2" type="xs:boolean" minOccurs="0" />
+              <xs:element name="FLG3" msprop:Generator_ColumnVarNameInTable="columnFLG3" msprop:Generator_ColumnPropNameInRow="FLG3" msprop:Generator_ColumnPropNameInTable="FLG3Column" msprop:Generator_UserColumnName="FLG3" type="xs:boolean" minOccurs="0" />
+              <xs:element name="TAX_CD" msprop:Generator_ColumnVarNameInTable="columnTAX_CD" msprop:Generator_ColumnPropNameInRow="TAX_CD" msprop:Generator_ColumnPropNameInTable="TAX_CDColumn" msprop:Generator_UserColumnName="TAX_CD" type="xs:string" minOccurs="0" />
+              <xs:element name="SHOHIZEI_FLG" msprop:Generator_ColumnVarNameInTable="columnSHOHIZEI_FLG" msprop:Generator_ColumnPropNameInRow="SHOHIZEI_FLG" msprop:Generator_ColumnPropNameInTable="SHOHIZEI_FLGColumn" msprop:Generator_UserColumnName="SHOHIZEI_FLG" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

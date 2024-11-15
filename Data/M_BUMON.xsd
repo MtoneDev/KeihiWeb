@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="M_BUMON" targetNamespace="http://tempuri.org/M_BUMON.xsd" xmlns:mstns="http://tempuri.org/M_BUMON.xsd" xmlns="http://tempuri.org/M_BUMON.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="KeihiSQL_TEST" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="KeihiSQL_TEST (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.KeihiSQL_TEST.ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="M_BUMON" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="M_BUMON" msprop:Generator_UserDSName="M_BUMON">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="M_BUMON" msprop:Generator_TableClassName="M_BUMONDataTable" msprop:Generator_TableVarName="tableM_BUMON" msprop:Generator_RowChangedName="M_BUMONRowChanged" msprop:Generator_TablePropName="_M_BUMON" msprop:Generator_RowDeletingName="M_BUMONRowDeleting" msprop:Generator_RowChangingName="M_BUMONRowChanging" msprop:Generator_RowEvHandlerName="M_BUMONRowChangeEventHandler" msprop:Generator_RowDeletedName="M_BUMONRowDeleted" msprop:Generator_RowClassName="M_BUMONRow" msprop:Generator_UserTableName="M_BUMON" msprop:Generator_RowEvArgName="M_BUMONRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="BUMON_CD" msprop:Generator_ColumnVarNameInTable="columnBUMON_CD" msprop:Generator_ColumnPropNameInRow="BUMON_CD" msprop:Generator_ColumnPropNameInTable="BUMON_CDColumn" msprop:Generator_UserColumnName="BUMON_CD">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="5" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="BUMON_NM" msprop:Generator_ColumnVarNameInTable="columnBUMON_NM" msprop:Generator_ColumnPropNameInRow="BUMON_NM" msprop:Generator_ColumnPropNameInTable="BUMON_NMColumn" msprop:Generator_UserColumnName="BUMON_NM" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="64" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SAIMU_BMN" msprop:Generator_ColumnVarNameInTable="columnSAIMU_BMN" msprop:Generator_ColumnPropNameInRow="SAIMU_BMN" msprop:Generator_ColumnPropNameInTable="SAIMU_BMNColumn" msprop:Generator_UserColumnName="SAIMU_BMN" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="5" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="M_BUMON_SHIME_INFO" msprop:Generator_TableClassName="M_BUMON_SHIME_INFODataTable" msprop:Generator_TableVarName="tableM_BUMON_SHIME_INFO" msprop:Generator_TablePropName="M_BUMON_SHIME_INFO" msprop:Generator_RowDeletingName="M_BUMON_SHIME_INFORowDeleting" msprop:Generator_RowChangingName="M_BUMON_SHIME_INFORowChanging" msprop:Generator_RowEvHandlerName="M_BUMON_SHIME_INFORowChangeEventHandler" msprop:Generator_RowDeletedName="M_BUMON_SHIME_INFORowDeleted" msprop:Generator_UserTableName="M_BUMON_SHIME_INFO" msprop:Generator_RowChangedName="M_BUMON_SHIME_INFORowChanged" msprop:Generator_RowEvArgName="M_BUMON_SHIME_INFORowChangeEvent" msprop:Generator_RowClassName="M_BUMON_SHIME_INFORow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="BUMON_CD" msprop:Generator_ColumnVarNameInTable="columnBUMON_CD" msprop:Generator_ColumnPropNameInRow="BUMON_CD" msprop:Generator_ColumnPropNameInTable="BUMON_CDColumn" msprop:Generator_UserColumnName="BUMON_CD">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="5" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="BUMON_NM" msprop:Generator_ColumnVarNameInTable="columnBUMON_NM" msprop:Generator_ColumnPropNameInRow="BUMON_NM" msprop:Generator_ColumnPropNameInTable="BUMON_NMColumn" msprop:Generator_UserColumnName="BUMON_NM" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="64" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SAIMU_BMN" msprop:Generator_ColumnVarNameInTable="columnSAIMU_BMN" msprop:Generator_ColumnPropNameInRow="SAIMU_BMN" msprop:Generator_ColumnPropNameInTable="SAIMU_BMNColumn" msprop:Generator_UserColumnName="SAIMU_BMN" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="5" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CLOSE_DATE" msprop:Generator_ColumnVarNameInTable="columnCLOSE_DATE" msprop:Generator_ColumnPropNameInRow="CLOSE_DATE" msprop:Generator_ColumnPropNameInTable="CLOSE_DATEColumn" msprop:Generator_UserColumnName="CLOSE_DATE" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CANCEL_FLG" msprop:Generator_ColumnVarNameInTable="columnCANCEL_FLG" msprop:Generator_ColumnPropNameInRow="CANCEL_FLG" msprop:Generator_ColumnPropNameInTable="CANCEL_FLGColumn" msprop:Generator_UserColumnName="CANCEL_FLG" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

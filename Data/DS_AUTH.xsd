@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DS_AUTH" targetNamespace="http://tempuri.org/DS_AUTH.xsd" xmlns:mstns="http://tempuri.org/DS_AUTH.xsd" xmlns="http://tempuri.org/DS_AUTH.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="KeihiSQL_TEST" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="KeihiSQL_TEST (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.KeihiSQL_TEST.ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DS_AUTH" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DS_AUTH" msprop:Generator_UserDSName="DS_AUTH">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="AUTH_INFO" msprop:Generator_TableClassName="AUTH_INFODataTable" msprop:Generator_TableVarName="tableAUTH_INFO" msprop:Generator_RowChangedName="AUTH_INFORowChanged" msprop:Generator_TablePropName="AUTH_INFO" msprop:Generator_RowDeletingName="AUTH_INFORowDeleting" msprop:Generator_RowChangingName="AUTH_INFORowChanging" msprop:Generator_RowEvHandlerName="AUTH_INFORowChangeEventHandler" msprop:Generator_RowDeletedName="AUTH_INFORowDeleted" msprop:Generator_RowClassName="AUTH_INFORow" msprop:Generator_UserTableName="AUTH_INFO" msprop:Generator_RowEvArgName="AUTH_INFORowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="USER_ID" msprop:Generator_ColumnVarNameInTable="columnUSER_ID" msprop:Generator_ColumnPropNameInRow="USER_ID" msprop:Generator_ColumnPropNameInTable="USER_IDColumn" msprop:Generator_UserColumnName="USER_ID">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="6" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="USER_NAME" msprop:Generator_ColumnVarNameInTable="columnUSER_NAME" msprop:Generator_ColumnPropNameInRow="USER_NAME" msprop:Generator_ColumnPropNameInTable="USER_NAMEColumn" msprop:Generator_UserColumnName="USER_NAME" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="64" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="USER_KANA" msprop:Generator_ColumnVarNameInTable="columnUSER_KANA" msprop:Generator_ColumnPropNameInRow="USER_KANA" msprop:Generator_ColumnPropNameInTable="USER_KANAColumn" msprop:Generator_UserColumnName="USER_KANA" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="64" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="USER_LEVEL" msprop:Generator_ColumnVarNameInTable="columnUSER_LEVEL" msprop:Generator_ColumnPropNameInRow="USER_LEVEL" msprop:Generator_ColumnPropNameInTable="USER_LEVELColumn" msprop:Generator_UserColumnName="USER_LEVEL" type="xs:unsignedByte" minOccurs="0" />
+              <xs:element name="BUMON_CD" msprop:Generator_ColumnVarNameInTable="columnBUMON_CD" msprop:Generator_ColumnPropNameInRow="BUMON_CD" msprop:Generator_ColumnPropNameInTable="BUMON_CDColumn" msprop:Generator_UserColumnName="BUMON_CD" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="5" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="BUMON_NAME" msprop:Generator_ColumnVarNameInTable="columnBUMON_NAME" msprop:Generator_ColumnPropNameInRow="BUMON_NAME" msprop:Generator_ColumnPropNameInTable="BUMON_NAMEColumn" msprop:Generator_UserColumnName="BUMON_NAME" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="64" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

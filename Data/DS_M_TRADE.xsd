@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DS_M_TRADE" targetNamespace="http://tempuri.org/DS_M_TRADE.xsd" xmlns:mstns="http://tempuri.org/DS_M_TRADE.xsd" xmlns="http://tempuri.org/DS_M_TRADE.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="KeihiSQL_TEST" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="KeihiSQL_TEST (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.KeihiSQL_TEST.ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DS_M_TRADE" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DS_M_TRADE" msprop:Generator_UserDSName="DS_M_TRADE">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="M_TRADE" msprop:Generator_TableClassName="M_TRADEDataTable" msprop:Generator_TableVarName="tableM_TRADE" msprop:Generator_TablePropName="M_TRADE" msprop:Generator_RowDeletingName="M_TRADERowDeleting" msprop:Generator_RowChangingName="M_TRADERowChanging" msprop:Generator_RowEvHandlerName="M_TRADERowChangeEventHandler" msprop:Generator_RowDeletedName="M_TRADERowDeleted" msprop:Generator_UserTableName="M_TRADE" msprop:Generator_RowChangedName="M_TRADERowChanged" msprop:Generator_RowEvArgName="M_TRADERowChangeEvent" msprop:Generator_RowClassName="M_TRADERow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="TRADE_CD" msprop:Generator_ColumnVarNameInTable="columnTRADE_CD" msprop:Generator_ColumnPropNameInRow="TRADE_CD" msprop:Generator_ColumnPropNameInTable="TRADE_CDColumn" msprop:Generator_UserColumnName="TRADE_CD">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="6" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TRADE_NM" msprop:Generator_ColumnVarNameInTable="columnTRADE_NM" msprop:Generator_ColumnPropNameInRow="TRADE_NM" msprop:Generator_ColumnPropNameInTable="TRADE_NMColumn" msprop:Generator_UserColumnName="TRADE_NM" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TRADE_KN" msprop:Generator_ColumnVarNameInTable="columnTRADE_KN" msprop:Generator_ColumnPropNameInRow="TRADE_KN" msprop:Generator_ColumnPropNameInTable="TRADE_KNColumn" msprop:Generator_UserColumnName="TRADE_KN" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="80" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ADDRESS1" msprop:Generator_ColumnVarNameInTable="columnADDRESS1" msprop:Generator_ColumnPropNameInRow="ADDRESS1" msprop:Generator_ColumnPropNameInTable="ADDRESS1Column" msprop:Generator_UserColumnName="ADDRESS1" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ADDRESS2" msprop:Generator_ColumnVarNameInTable="columnADDRESS2" msprop:Generator_ColumnPropNameInRow="ADDRESS2" msprop:Generator_ColumnPropNameInTable="ADDRESS2Column" msprop:Generator_UserColumnName="ADDRESS2" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="BANK_CD" msprop:Generator_ColumnVarNameInTable="columnBANK_CD" msprop:Generator_ColumnPropNameInRow="BANK_CD" msprop:Generator_ColumnPropNameInTable="BANK_CDColumn" msprop:Generator_UserColumnName="BANK_CD" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="BRANCH_CD" msprop:Generator_ColumnVarNameInTable="columnBRANCH_CD" msprop:Generator_ColumnPropNameInRow="BRANCH_CD" msprop:Generator_ColumnPropNameInTable="BRANCH_CDColumn" msprop:Generator_UserColumnName="BRANCH_CD" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="3" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ACCOUNT_CD" msprop:Generator_ColumnVarNameInTable="columnACCOUNT_CD" msprop:Generator_ColumnPropNameInRow="ACCOUNT_CD" msprop:Generator_ColumnPropNameInTable="ACCOUNT_CDColumn" msprop:Generator_UserColumnName="ACCOUNT_CD" type="xs:short" minOccurs="0" />
+              <xs:element name="ACC_NUM" msprop:Generator_ColumnVarNameInTable="columnACC_NUM" msprop:Generator_ColumnPropNameInRow="ACC_NUM" msprop:Generator_ColumnPropNameInTable="ACC_NUMColumn" msprop:Generator_UserColumnName="ACC_NUM" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="7" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ACC_NAME" msprop:Generator_ColumnVarNameInTable="columnACC_NAME" msprop:Generator_ColumnPropNameInRow="ACC_NAME" msprop:Generator_ColumnPropNameInTable="ACC_NAMEColumn" msprop:Generator_UserColumnName="ACC_NAME" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="40" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MIBARAI_CD" msprop:Generator_ColumnVarNameInTable="columnMIBARAI_CD" msprop:Generator_ColumnPropNameInRow="MIBARAI_CD" msprop:Generator_ColumnPropNameInTable="MIBARAI_CDColumn" msprop:Generator_UserColumnName="MIBARAI_CD" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="5" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SHIHARAI_CD" msprop:Generator_ColumnVarNameInTable="columnSHIHARAI_CD" msprop:Generator_ColumnPropNameInRow="SHIHARAI_CD" msprop:Generator_ColumnPropNameInTable="SHIHARAI_CDColumn" msprop:Generator_UserColumnName="SHIHARAI_CD" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="KEIYAKU_NO" msprop:Generator_ColumnVarNameInTable="columnKEIYAKU_NO" msprop:Generator_ColumnPropNameInRow="KEIYAKU_NO" msprop:Generator_ColumnPropNameInTable="KEIYAKU_NOColumn" msprop:Generator_UserColumnName="KEIYAKU_NO" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

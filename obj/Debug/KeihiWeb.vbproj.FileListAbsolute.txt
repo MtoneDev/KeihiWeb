@@ -1,0 +1,44 @@
+D:\workspace\KeihiWeb\KeihiWeb\bin\roslyn\csc.exe
+D:\workspace\KeihiWeb\KeihiWeb\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\workspace\KeihiWeb\KeihiWeb\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\workspace\KeihiWeb\KeihiWeb\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\workspace\KeihiWeb\KeihiWeb\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\workspace\KeihiWeb\KeihiWeb\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\workspace\KeihiWeb\KeihiWeb\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\workspace\KeihiWeb\KeihiWeb\bin\roslyn\System.Collections.Immutable.dll
+D:\workspace\KeihiWeb\KeihiWeb\bin\roslyn\System.Reflection.Metadata.dll
+D:\workspace\KeihiWeb\KeihiWeb\bin\roslyn\vbc.exe
+D:\workspace\KeihiWeb\KeihiWeb\bin\roslyn\VBCSCompiler.exe
+D:\workspace\KeihiWeb\KeihiWeb\bin\roslyn\VBCSCompiler.exe.config
+D:\workspace\KeihiWeb\KeihiWeb\bin\KeihiWeb.dll.config
+D:\workspace\KeihiWeb\KeihiWeb\bin\KeihiWeb.dll
+D:\workspace\KeihiWeb\KeihiWeb\bin\KeihiWeb.pdb
+D:\workspace\KeihiWeb\KeihiWeb\bin\WebForms_Basic.xml
+D:\workspace\KeihiWeb\KeihiWeb\obj\Debug\KeihiWeb.Resources.resources
+D:\workspace\KeihiWeb\KeihiWeb\obj\Debug\KeihiWeb.vbproj.GenerateResource.Cache
+D:\workspace\KeihiWeb\KeihiWeb\obj\Debug\KeihiWeb.dll
+D:\workspace\KeihiWeb\KeihiWeb\obj\Debug\WebForms_Basic.xml
+D:\workspace\KeihiWeb\KeihiWeb\obj\Debug\KeihiWeb.pdb
+D:\workspace\KeihiWeb\KeihiWeb\obj\Debug\KeihiWeb.vbprojResolveAssemblyReference.cache
+C:\Users\STS02\Desktop\新しいフォルダー (3)\KeihiWeb\bin\roslyn\csc.exe
+C:\Users\STS02\Desktop\新しいフォルダー (3)\KeihiWeb\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\STS02\Desktop\新しいフォルダー (3)\KeihiWeb\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\STS02\Desktop\新しいフォルダー (3)\KeihiWeb\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\STS02\Desktop\新しいフォルダー (3)\KeihiWeb\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\STS02\Desktop\新しいフォルダー (3)\KeihiWeb\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\STS02\Desktop\新しいフォルダー (3)\KeihiWeb\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\STS02\Desktop\新しいフォルダー (3)\KeihiWeb\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\STS02\Desktop\新しいフォルダー (3)\KeihiWeb\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\STS02\Desktop\新しいフォルダー (3)\KeihiWeb\bin\roslyn\vbc.exe
+C:\Users\STS02\Desktop\新しいフォルダー (3)\KeihiWeb\bin\roslyn\VBCSCompiler.exe
+C:\Users\STS02\Desktop\新しいフォルダー (3)\KeihiWeb\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\STS02\Desktop\新しいフォルダー (3)\KeihiWeb\bin\KeihiWeb.dll.config
+C:\Users\STS02\Desktop\新しいフォルダー (3)\KeihiWeb\bin\KeihiWeb.dll
+C:\Users\STS02\Desktop\新しいフォルダー (3)\KeihiWeb\bin\KeihiWeb.pdb
+C:\Users\STS02\Desktop\新しいフォルダー (3)\KeihiWeb\bin\WebForms_Basic.xml
+C:\Users\STS02\Desktop\新しいフォルダー (3)\KeihiWeb\obj\Debug\KeihiWeb.Resources.resources
+C:\Users\STS02\Desktop\新しいフォルダー (3)\KeihiWeb\obj\Debug\KeihiWeb.vbproj.GenerateResource.Cache
+C:\Users\STS02\Desktop\新しいフォルダー (3)\KeihiWeb\obj\Debug\KeihiWeb.dll
+C:\Users\STS02\Desktop\新しいフォルダー (3)\KeihiWeb\obj\Debug\WebForms_Basic.xml
+C:\Users\STS02\Desktop\新しいフォルダー (3)\KeihiWeb\obj\Debug\KeihiWeb.pdb
+C:\Users\STS02\Desktop\新しいフォルダー (3)\KeihiWeb\obj\Debug\KeihiWeb.vbprojResolveAssemblyReference.cache
