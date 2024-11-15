@@ -1,0 +1,952 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>
+    </SchemaVersion>
+    <ProjectGuid>{CD8E53D2-B177-494B-AE08-1CEEF98E43D7}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>KeihiWeb</RootNamespace>
+    <AssemblyName>KeihiWeb</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <MyType>Custom</MyType>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>WebForms_Basic.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>WebForms_Basic.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EPPlus">
+      <HintPath>D:\tak\コマース\経理\経費システム刷新\200_開発\KeihiWeb\KeihiWeb\KeihiWeb\bin\EPPlus.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.Agent.Intercept, Version=1.2.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.1.2.1\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.DependencyCollector, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.DependencyCollector.2.1.0\lib\net45\Microsoft.AI.DependencyCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.PerfCounterCollector, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.PerfCounterCollector.2.1.0\lib\net45\Microsoft.AI.PerfCounterCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.ServerTelemetryChannel, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.2.1.0\lib\net45\Microsoft.AI.ServerTelemetryChannel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.Web, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Web.2.1.0\lib\net45\Microsoft.AI.Web.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.WindowsServer, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.2.1.0\lib\net45\Microsoft.AI.WindowsServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationInsights, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.2.1.0\lib\net46\Microsoft.ApplicationInsights.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="AspNet.ScriptManager.bootstrap">
+      <HintPath>..\packages\AspNet.ScriptManager.bootstrap.3.0.0\lib\net45\AspNet.ScriptManager.bootstrap.dll</HintPath>
+    </Reference>
+    <Reference Include="AspNet.ScriptManager.jQuery">
+      <HintPath>..\packages\AspNet.ScriptManager.jQuery.1.10.2\lib\net45\AspNet.ScriptManager.jQuery.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ScriptManager.MSAjax">
+      <HintPath>..\packages\Microsoft.AspNet.ScriptManager.MSAjax.5.0.0\lib\net45\Microsoft.ScriptManager.MSAjax.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ScriptManager.WebForms">
+      <HintPath>..\packages\Microsoft.AspNet.ScriptManager.WebForms.5.0.0\lib\net45\Microsoft.ScriptManager.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <Private>True</Private>
+      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Web.Optimization.WebForms">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.WebForms.1.1.3\lib\net45\Microsoft.AspNet.Web.Optimization.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.FriendlyUrls">
+      <HintPath>..\packages\Microsoft.AspNet.FriendlyUrls.Core.1.0.2\lib\net45\Microsoft.AspNet.FriendlyUrls.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Output\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Collections.Specialized" />
+    <Import Include="System.Configuration" />
+    <Import Include="System.Text" />
+    <Import Include="System.Text.RegularExpressions" />
+    <Import Include="System.Web" />
+    <Import Include="System.Web.Caching" />
+    <Import Include="System.Web.Routing" />
+    <Import Include="System.Web.SessionState" />
+    <Import Include="System.Web.Security" />
+    <Import Include="System.Web.Profile" />
+    <Import Include="System.Web.UI" />
+    <Import Include="System.Web.UI.WebControls" />
+    <Import Include="System.Web.UI.WebControls.WebParts" />
+    <Import Include="System.Web.UI.HtmlControls" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="About.aspx" />
+    <Content Include="bin\Antlr3.Runtime.dll" />
+    <Content Include="bin\Antlr3.Runtime.pdb" />
+    <Content Include="bin\AspNet.ScriptManager.bootstrap.dll" />
+    <Content Include="bin\AspNet.ScriptManager.jQuery.dll" />
+    <Content Include="bin\EPPlus.dll" />
+    <Content Include="bin\EPPlus.xml" />
+    <Content Include="bin\ja\Microsoft.AspNet.FriendlyUrls.resources.dll" />
+    <Content Include="bin\ja\System.Web.Optimization.resources.dll" />
+    <Content Include="bin\KeihiWeb.dll" />
+    <Content Include="bin\KeihiWeb.pdb" />
+    <Content Include="bin\Microsoft.AI.Agent.Intercept.dll" />
+    <Content Include="bin\Microsoft.AI.DependencyCollector.dll" />
+    <Content Include="bin\Microsoft.AI.DependencyCollector.xml" />
+    <Content Include="bin\Microsoft.AI.PerfCounterCollector.dll" />
+    <Content Include="bin\Microsoft.AI.ServerTelemetryChannel.dll" />
+    <Content Include="bin\Microsoft.AI.ServerTelemetryChannel.xml" />
+    <Content Include="bin\Microsoft.AI.Web.dll" />
+    <Content Include="bin\Microsoft.AI.Web.xml" />
+    <Content Include="bin\Microsoft.AI.WindowsServer.dll" />
+    <Content Include="bin\Microsoft.AI.WindowsServer.xml" />
+    <Content Include="bin\Microsoft.ApplicationInsights.dll" />
+    <Content Include="bin\Microsoft.ApplicationInsights.xml" />
+    <Content Include="bin\Microsoft.AspNet.FriendlyUrls.dll" />
+    <Content Include="bin\Microsoft.AspNet.FriendlyUrls.xml" />
+    <Content Include="bin\Microsoft.AspNet.Web.Optimization.WebForms.dll" />
+    <Content Include="bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll" />
+    <Content Include="bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml" />
+    <Content Include="bin\Microsoft.ScriptManager.MSAjax.dll" />
+    <Content Include="bin\Microsoft.ScriptManager.WebForms.dll" />
+    <Content Include="bin\Microsoft.Web.Infrastructure.dll" />
+    <Content Include="bin\Newtonsoft.Json.dll" />
+    <Content Include="bin\Newtonsoft.Json.xml" />
+    <Content Include="bin\roslyn\csc.exe" />
+    <Content Include="bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll" />
+    <Content Include="bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll" />
+    <Content Include="bin\roslyn\Microsoft.CodeAnalysis.dll" />
+    <Content Include="bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll" />
+    <Content Include="bin\roslyn\System.Collections.Immutable.dll" />
+    <Content Include="bin\roslyn\System.Reflection.Metadata.dll" />
+    <Content Include="bin\roslyn\vbc.exe" />
+    <Content Include="bin\roslyn\VBCSCompiler.exe" />
+    <Content Include="bin\System.Web.Optimization.dll" />
+    <Content Include="bin\System.Web.Optimization.xml" />
+    <Content Include="bin\WebForms_Basic.xml" />
+    <Content Include="bin\WebGrease.dll" />
+    <Content Include="Contact.aspx" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Common.css" />
+    <Content Include="Content\image\indicator.gif" />
+    <Content Include="Content\jquery-ui-themes-1.12.0\themes\cupertino\images\ui-bg_diagonals-thick_90_eeeeee_40x40.png" />
+    <Content Include="Content\jquery-ui-themes-1.12.0\themes\cupertino\images\ui-bg_glass_100_e4f1fb_1x400.png" />
+    <Content Include="Content\jquery-ui-themes-1.12.0\themes\cupertino\images\ui-bg_glass_50_3baae3_1x400.png" />
+    <Content Include="Content\jquery-ui-themes-1.12.0\themes\cupertino\images\ui-bg_glass_80_d7ebf9_1x400.png" />
+    <Content Include="Content\jquery-ui-themes-1.12.0\themes\cupertino\images\ui-bg_highlight-hard_100_f2f5f7_1x100.png" />
+    <Content Include="Content\jquery-ui-themes-1.12.0\themes\cupertino\images\ui-bg_highlight-hard_70_000000_1x100.png" />
+    <Content Include="Content\jquery-ui-themes-1.12.0\themes\cupertino\images\ui-bg_highlight-soft_100_deedf7_1x100.png" />
+    <Content Include="Content\jquery-ui-themes-1.12.0\themes\cupertino\images\ui-bg_highlight-soft_25_ffef8f_1x100.png" />
+    <Content Include="Content\jquery-ui-themes-1.12.0\themes\cupertino\images\ui-icons_2694e8_256x240.png" />
+    <Content Include="Content\jquery-ui-themes-1.12.0\themes\cupertino\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\jquery-ui-themes-1.12.0\themes\cupertino\images\ui-icons_3d80b3_256x240.png" />
+    <Content Include="Content\jquery-ui-themes-1.12.0\themes\cupertino\images\ui-icons_72a7cf_256x240.png" />
+    <Content Include="Content\jquery-ui-themes-1.12.0\themes\cupertino\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="Content\jquery-ui-themes-1.12.0\themes\cupertino\jquery-ui.css" />
+    <Content Include="Content\jquery-ui-themes-1.12.0\themes\cupertino\jquery-ui.min.css" />
+    <Content Include="Content\jquery-ui-themes-1.12.0\themes\cupertino\theme.css" />
+    <Content Include="Content\Site.css" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Data\M_USER.xsc">
+      <DependentUpon>M_USER.xsd</DependentUpon>
+    </Content>
+    <Content Include="Data\M_BUMON.xsc">
+      <DependentUpon>M_BUMON.xsd</DependentUpon>
+    </Content>
+    <Content Include="Login.aspx" />
+    <Content Include="obj\Debug\KeihiWeb.dll" />
+    <Content Include="obj\Debug\KeihiWeb.pdb" />
+    <Content Include="obj\Debug\KeihiWeb.vbproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\TempPE\Data.DS_AUTH.Designer.vb.dll" />
+    <Content Include="obj\Debug\TempPE\Data.DS_BILL.Designer.vb.dll" />
+    <Content Include="obj\Debug\TempPE\Data.DS_CT_CLOSE.Designer.vb.dll" />
+    <Content Include="obj\Debug\TempPE\Data.DS_CT_CLOSE1.Designer.vb.dll" />
+    <Content Include="obj\Debug\TempPE\Data.DS_GLOVIA.Designer.vb.dll" />
+    <Content Include="obj\Debug\TempPE\Data.DS_M_KAMOKU.Designer.vb.dll" />
+    <Content Include="obj\Debug\TempPE\Data.DS_M_MENU.Designer.vb.dll" />
+    <Content Include="obj\Debug\TempPE\Data.DS_M_TRADE.Designer.vb.dll" />
+    <Content Include="obj\Debug\TempPE\Data.DS_M_UTIWAKE.Designer.vb.dll" />
+    <Content Include="obj\Debug\TempPE\Data.DS_M_ZEIRITU.Designer.vb.dll" />
+    <Content Include="obj\Debug\TempPE\Data.DS_PAYMENT.Designer.vb.dll" />
+    <Content Include="obj\Debug\TempPE\Data.M_BUMON.Designer.vb.dll" />
+    <Content Include="obj\Debug\TempPE\Data.M_USER.Designer.vb.dll" />
+    <Content Include="obj\Debug\TempPE\My Project.Resources.Designer.vb.dll" />
+    <Content Include="obj\Debug\WebForms_Basic.xml" />
+    <Content Include="Scripts\droppy\droppy.css" />
+    <Content Include="Scripts\droppy\jquery.droppy.js" />
+    <Content Include="Scripts\i18n\datepicker-ja.js" />
+    <Content Include="Scripts\jquery-ui-1.12.0\AUTHORS.txt" />
+    <Content Include="Scripts\jquery-ui-1.12.0\external\jquery\jquery.js" />
+    <Content Include="Scripts\jquery-ui-1.12.0\images\ui-bg_diagonals-thick_90_eeeeee_40x40.png" />
+    <Content Include="Scripts\jquery-ui-1.12.0\images\ui-bg_glass_100_e4f1fb_1x400.png" />
+    <Content Include="Scripts\jquery-ui-1.12.0\images\ui-bg_glass_50_3baae3_1x400.png" />
+    <Content Include="Scripts\jquery-ui-1.12.0\images\ui-bg_glass_80_d7ebf9_1x400.png" />
+    <Content Include="Scripts\jquery-ui-1.12.0\images\ui-bg_highlight-hard_100_f2f5f7_1x100.png" />
+    <Content Include="Scripts\jquery-ui-1.12.0\images\ui-bg_highlight-hard_70_000000_1x100.png" />
+    <Content Include="Scripts\jquery-ui-1.12.0\images\ui-bg_highlight-soft_100_deedf7_1x100.png" />
+    <Content Include="Scripts\jquery-ui-1.12.0\images\ui-bg_highlight-soft_25_ffef8f_1x100.png" />
+    <Content Include="Scripts\jquery-ui-1.12.0\images\ui-icons_2694e8_256x240.png" />
+    <Content Include="Scripts\jquery-ui-1.12.0\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Scripts\jquery-ui-1.12.0\images\ui-icons_3d80b3_256x240.png" />
+    <Content Include="Scripts\jquery-ui-1.12.0\images\ui-icons_72a7cf_256x240.png" />
+    <Content Include="Scripts\jquery-ui-1.12.0\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="Scripts\jquery-ui-1.12.0\index.html" />
+    <Content Include="Scripts\jquery-ui-1.12.0\jquery-ui.css" />
+    <Content Include="Scripts\jquery-ui-1.12.0\jquery-ui.js" />
+    <Content Include="Scripts\jquery-ui-1.12.0\jquery-ui.min.css" />
+    <Content Include="Scripts\jquery-ui-1.12.0\jquery-ui.min.js" />
+    <Content Include="Scripts\jquery-ui-1.12.0\jquery-ui.structure.css" />
+    <Content Include="Scripts\jquery-ui-1.12.0\jquery-ui.structure.min.css" />
+    <Content Include="Scripts\jquery-ui-1.12.0\jquery-ui.theme.css" />
+    <Content Include="Scripts\jquery-ui-1.12.0\jquery-ui.theme.min.css" />
+    <Content Include="Scripts\jquery-ui-1.12.0\LICENSE.txt" />
+    <Content Include="Scripts\jquery.blockUI.js" />
+    <Content Include="Scripts\WebForms\STSCommon\keihi_trade.js" />
+    <Content Include="Scripts\WebForms\STSCommon\keihi_zeiritu2.js" />
+    <Content Include="WebForm\Form_Freee_SEIKYU.aspx" />
+    <Content Include="WebForm\Form_Freee_SUITOU.aspx" />
+    <Content Include="WebForm\Form_M_TRADE.aspx" />
+    <Content Include="WebForm\Form_M_UCHIWAKE.aspx" />
+    <Content Include="WebForm\Form_NYKINDN_List.aspx" />
+    <Content Include="WebForm\Form_NYKINDN_New.aspx" />
+    <Content Include="Scripts\WebForms\STSCommon\common.js" />
+    <Content Include="Scripts\WebForms\STSCommon\keihi_bumon.js" />
+    <Content Include="Scripts\WebForms\STSCommon\Keihi_kamoku.js" />
+    <Content Include="Scripts\WebForms\STSCommon\keihi_user.js" />
+    <Content Include="Scripts\WebForms\STSCommon\keihi_zeiritu.js" />
+    <Content Include="WebForm\FileDL.aspx" />
+    <Content Include="WebForm\Form_ERR_PAGE.aspx" />
+    <Content Include="WebForm\Form_GLOVIA_SEIKYU.aspx" />
+    <Content Include="WebForm\Form_M_BUMON.aspx" />
+    <Content Include="WebForm\Form_M_KAMOKU.aspx" />
+    <Content Include="WebForm\Form_M_USER.aspx" />
+    <Content Include="WebForm\Form_M_ZEIRITU.aspx" />
+    <Content Include="WebForm\Form_Print_Seikyu.aspx" />
+    <Content Include="WebForm\Form_Print_SUITOU.aspx" />
+    <Content Include="WebForm\Form_SEIKYUDN_List.aspx" />
+    <Content Include="WebForm\Form_SEIKYUDN_New.aspx" />
+    <Content Include="WebForm\Form_SHIME_SEIKYU.aspx" />
+    <Content Include="WebForm\Form_SHIME_SUITOU.aspx" />
+    <Content Include="WebForm\Form_SYIKINDN_TEST.aspx" />
+    <Content Include="WebForm\Form_SYKINDN_List.aspx" />
+    <Content Include="WebForm\Form_SYKINDN_New.aspx" />
+    <Content Include="Data\DS_AUTH.xsc">
+      <DependentUpon>DS_AUTH.xsd</DependentUpon>
+    </Content>
+    <Content Include="From_BumonChange.aspx" />
+    <Content Include="WebForm\Form_GLOVIA_SUITOU.aspx" />
+    <Content Include="WebForm\Form_SYKINDN_New2.aspx" />
+    <Content Include="WebForm\UserCtrl\MenuUC.ascx" />
+    <None Include="bin\KeihiWeb.dll.config" />
+    <Content Include="bin\roslyn\Microsoft.CSharp.Core.targets" />
+    <Content Include="bin\roslyn\Microsoft.VisualBasic.Core.targets" />
+    <Content Include="bin\roslyn\VBCSCompiler.exe.config" />
+    <None Include="Data\DS_AUTH.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_AUTH.Designer.vb</LastGenOutput>
+    </None>
+    <Content Include="Data\DS_AUTH.xss">
+      <DependentUpon>DS_AUTH.xsd</DependentUpon>
+    </Content>
+    <Content Include="Data\DS_M_MENU.xsc">
+      <DependentUpon>DS_M_MENU.xsd</DependentUpon>
+    </Content>
+    <Content Include="Data\DS_CT_CLOSE.xsc">
+      <DependentUpon>DS_CT_CLOSE.xsd</DependentUpon>
+    </Content>
+    <Content Include="Data\DS_BILL.xsc">
+      <DependentUpon>DS_BILL.xsd</DependentUpon>
+    </Content>
+    <None Include="Data\DS_BILL.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_BILL.Designer.vb</LastGenOutput>
+    </None>
+    <Content Include="Data\DS_BILL.xss">
+      <DependentUpon>DS_BILL.xsd</DependentUpon>
+    </Content>
+    <None Include="Data\DS_CT_CLOSE.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_CT_CLOSE.Designer.vb</LastGenOutput>
+    </None>
+    <Content Include="Data\DS_CT_CLOSE.xss">
+      <DependentUpon>DS_CT_CLOSE.xsd</DependentUpon>
+    </Content>
+    <Content Include="Data\DS_M_KAMOKU.xsc">
+      <DependentUpon>DS_M_KAMOKU.xsd</DependentUpon>
+    </Content>
+    <Content Include="Data\DS_GLOVIA.xsc">
+      <DependentUpon>DS_GLOVIA.xsd</DependentUpon>
+    </Content>
+    <None Include="Data\DS_GLOVIA.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_GLOVIA.Designer.vb</LastGenOutput>
+    </None>
+    <Content Include="Data\DS_GLOVIA.xss">
+      <DependentUpon>DS_GLOVIA.xsd</DependentUpon>
+    </Content>
+    <None Include="Data\DS_M_KAMOKU.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_M_KAMOKU.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Data\DS_M_KAMOKU.xss">
+      <DependentUpon>DS_M_KAMOKU.xsd</DependentUpon>
+    </Content>
+    <None Include="Data\DS_M_MENU.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_M_MENU.Designer.vb</LastGenOutput>
+    </None>
+    <Content Include="Data\DS_M_MENU.xss">
+      <DependentUpon>DS_M_MENU.xsd</DependentUpon>
+    </Content>
+    <Content Include="Data\DS_PAYMENT.xsc">
+      <DependentUpon>DS_PAYMENT.xsd</DependentUpon>
+    </Content>
+    <Content Include="Data\DS_M_UTIWAKE.xsc">
+      <DependentUpon>DS_M_UTIWAKE.xsd</DependentUpon>
+    </Content>
+    <Content Include="Data\DS_M_TRADE.xsc">
+      <DependentUpon>DS_M_TRADE.xsd</DependentUpon>
+    </Content>
+    <None Include="Data\DS_M_TRADE.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_M_TRADE.Designer.vb</LastGenOutput>
+    </None>
+    <Content Include="Data\DS_M_TRADE.xss">
+      <DependentUpon>DS_M_TRADE.xsd</DependentUpon>
+    </Content>
+    <None Include="Data\DS_M_UTIWAKE.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_M_UTIWAKE.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Data\DS_M_UTIWAKE.xss">
+      <DependentUpon>DS_M_UTIWAKE.xsd</DependentUpon>
+    </Content>
+    <Content Include="Data\DS_M_ZEIRITU.xsc">
+      <DependentUpon>DS_M_ZEIRITU.xsd</DependentUpon>
+    </Content>
+    <None Include="Data\DS_M_ZEIRITU.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_M_ZEIRITU.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Data\DS_M_ZEIRITU.xss">
+      <DependentUpon>DS_M_ZEIRITU.xsd</DependentUpon>
+    </Content>
+    <None Include="Data\DS_PAYMENT.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_PAYMENT.Designer.vb</LastGenOutput>
+    </None>
+    <Content Include="Data\DS_PAYMENT.xss">
+      <DependentUpon>DS_PAYMENT.xsd</DependentUpon>
+    </Content>
+    <None Include="Data\M_BUMON.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>M_BUMON.Designer.vb</LastGenOutput>
+    </None>
+    <Content Include="Data\M_BUMON.xss">
+      <DependentUpon>M_BUMON.xsd</DependentUpon>
+    </Content>
+    <None Include="Data\M_USER.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>M_USER.Designer.vb</LastGenOutput>
+    </None>
+    <Content Include="Data\M_USER.xss">
+      <DependentUpon>M_USER.xsd</DependentUpon>
+    </Content>
+    <Content Include="Report\Rpt_Suitou_KamokuBetsu.xlsx" />
+    <Content Include="Report\Rpt_Suitou.xlsx" />
+    <Content Include="Report\Rpt_SeikyuShiwake.xlsx" />
+    <Content Include="obj\Debug\DesignTimeResolveAssemblyReferences.cache" />
+    <Content Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <Content Include="obj\Debug\KeihiWeb.vbproj.GenerateResource.Cache" />
+    <Content Include="obj\Debug\KeihiWeb.vbprojResolveAssemblyReference.cache" />
+    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\ai.0.22.19-build00125.js" />
+    <Content Include="Scripts\ai.0.22.19-build00125.min.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\jquery-1.10.2.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\respond.js" />
+    <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\WebForms\DetailsView.js" />
+    <Content Include="Scripts\WebForms\Focus.js" />
+    <Content Include="Scripts\WebForms\GridView.js" />
+    <Content Include="Scripts\WebForms\Menu.js" />
+    <Content Include="Scripts\WebForms\MenuStandards.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjax.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxApplicationServices.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxComponentModel.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxCore.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxGlobalization.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxHistory.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxNetwork.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxSerialization.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxTimer.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxWebForms.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxWebServices.js" />
+    <Content Include="Scripts\WebForms\SmartNav.js" />
+    <Content Include="Scripts\WebForms\TreeView.js" />
+    <Content Include="Scripts\WebForms\WebForms.js" />
+    <Content Include="Scripts\WebForms\WebParts.js" />
+    <Content Include="Scripts\WebForms\WebUIValidation.js" />
+    <Content Include="Scripts\_references.js" />
+    <Content Include="Default.aspx" />
+    <Content Include="favicon.ico" />
+    <Content Include="Global.asax" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Bundle.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="packages.config" />
+    <None Include="Project_Readme.html" />
+    <Content Include="Scripts\jquery-1.10.2.min.map" />
+    <Content Include="Scripts\jquery-ui-1.12.0\package.json" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.vb" />
+    <Compile Include="App_Start\RouteConfig.vb" />
+    <Compile Include="About.aspx.designer.vb">
+      <DependentUpon>About.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="About.aspx.vb">
+      <DependentUpon>About.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Common\Constatnts.vb" />
+    <Compile Include="Common\Logging\DataLogger.vb" />
+    <Compile Include="Common\Logging\Logger.vb" />
+    <Compile Include="Common\Logging\LogInfoVal.vb" />
+    <Compile Include="Common\Uty\Uty_Common.vb" />
+    <Compile Include="Common\Uty\Uty_Config.vb" />
+    <Compile Include="Common\Uty\Uty_Dbinfo.vb" />
+    <Compile Include="Common\Uty\Uty_File.vb" />
+    <Compile Include="Common\Uty\Uty_TextFile.vb" />
+    <Compile Include="Common\Uty\Uty_UI.vb" />
+    <Compile Include="Contact.aspx.designer.vb">
+      <DependentUpon>Contact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Contact.aspx.vb">
+      <DependentUpon>Contact.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Ctrl\CTL_AUTH.vb" />
+    <Compile Include="Ctrl\CTL_BILL.vb" />
+    <Compile Include="Ctrl\CTL_CT_CLOSE.vb" />
+    <Compile Include="Ctrl\CTL_GLOVIA.vb" />
+    <Compile Include="Ctrl\CTL_M_BUMON.vb" />
+    <Compile Include="Ctrl\CTL_M_KAMOKU.vb" />
+    <Compile Include="Ctrl\CTL_M_MENU.vb" />
+    <Compile Include="Ctrl\CTL_M_TRADE.vb" />
+    <Compile Include="Ctrl\CTL_M_USER.vb" />
+    <Compile Include="Ctrl\CTL_M_UTIWAKE.vb" />
+    <Compile Include="Ctrl\CTL_M_ZEIRITU.vb" />
+    <Compile Include="Ctrl\CTL_PAYMENT.vb" />
+    <Compile Include="Data\DS_AUTH.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_AUTH.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Data\DS_BILL.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_BILL.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Data\DS_CT_CLOSE.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_CT_CLOSE.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Data\DS_GLOVIA.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_GLOVIA.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Data\DS_M_KAMOKU.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_M_KAMOKU.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Data\DS_M_MENU.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_M_MENU.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Data\DS_M_TRADE.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_M_TRADE.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Data\DS_M_UTIWAKE.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_M_UTIWAKE.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Data\DS_M_ZEIRITU.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_M_ZEIRITU.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Data\DS_PAYMENT.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_PAYMENT.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Data\M_BUMON.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>M_BUMON.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Data\M_USER.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>M_USER.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Data\val\val_AppInfo.vb" />
+    <Compile Include="Default.aspx.vb">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.designer.vb">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Enty\Ety_AUTH.vb" />
+    <Compile Include="Enty\Ety_Base.vb" />
+    <Compile Include="Enty\Ety_CT_BILL1.vb" />
+    <Compile Include="Enty\Ety_CT_BILL2.vb" />
+    <Compile Include="Enty\Ety_CT_CLOSE.vb" />
+    <Compile Include="Enty\Ety_CT_PAYMENT1.vb" />
+    <Compile Include="Enty\Ety_GLOVIA.vb" />
+    <Compile Include="Enty\Ety_M_BUMON.vb" />
+    <Compile Include="Enty\Ety_M_KAMOKU.vb" />
+    <Compile Include="Enty\Ety_M_MENU.vb" />
+    <Compile Include="Enty\Ety_M_TRADE.vb" />
+    <Compile Include="Enty\Ety_M_USER.vb" />
+    <Compile Include="Enty\Ety_M_UTIWAKE.vb" />
+    <Compile Include="Enty\Ety_M_ZEIRITU.vb" />
+    <Compile Include="Enty\Ety_CT_PAYMENT2.vb" />
+    <Compile Include="Global.asax.vb">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.designer.vb">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.vb">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\MyExtensions\MyWebExtension.vb">
+      <VBMyExtensionTemplateID>Microsoft.VisualBasic.Web.MyExtension</VBMyExtensionTemplateID>
+      <VBMyExtensionTemplateVersion>1.0.0.0</VBMyExtensionTemplateVersion>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Report\Rpt_SeikyuShiwake.vb" />
+    <Compile Include="Report\Rpt_Suitou.vb" />
+    <Compile Include="Report\Rpt_Suitou_KamokuBetsu.vb" />
+    <Compile Include="WebForm\Form_Freee_SEIKYU.aspx.designer.vb">
+      <DependentUpon>Form_Freee_SEIKYU.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm\Form_Freee_SEIKYU.aspx.vb">
+      <DependentUpon>Form_Freee_SEIKYU.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="WebForm\Form_Freee_SUITOU.aspx.designer.vb">
+      <DependentUpon>Form_Freee_SUITOU.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm\Form_Freee_SUITOU.aspx.vb">
+      <DependentUpon>Form_Freee_SUITOU.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="WebForm\Form_M_TRADE.aspx.designer.vb">
+      <DependentUpon>Form_M_TRADE.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm\Form_M_TRADE.aspx.vb">
+      <DependentUpon>Form_M_TRADE.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="WebForm\Form_M_UCHIWAKE.aspx.designer.vb">
+      <DependentUpon>Form_M_UCHIWAKE.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm\Form_M_UCHIWAKE.aspx.vb">
+      <DependentUpon>Form_M_UCHIWAKE.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="WebForm\Form_NYKINDN_List.aspx.designer.vb">
+      <DependentUpon>Form_NYKINDN_List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm\Form_NYKINDN_List.aspx.vb">
+      <DependentUpon>Form_NYKINDN_List.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="WebForm\Form_NYKINDN_New.aspx.designer.vb">
+      <DependentUpon>Form_NYKINDN_New.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm\Form_NYKINDN_New.aspx.vb">
+      <DependentUpon>Form_NYKINDN_New.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Site.Master.designer.vb">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Site.Master.vb">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewSwitcher.ascx.vb">
+      <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewSwitcher.ascx.designer.vb">
+      <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Site.Mobile.Master.vb">
+      <DependentUpon>Site.Mobile.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Mobile.Master.designer.vb">
+      <DependentUpon>Site.Mobile.Master</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm\FileDL.aspx.designer.vb">
+      <DependentUpon>FileDL.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm\FileDL.aspx.vb">
+      <DependentUpon>FileDL.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm\Form_ERR_PAGE.aspx.designer.vb">
+      <DependentUpon>Form_ERR_PAGE.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm\Form_ERR_PAGE.aspx.vb">
+      <DependentUpon>Form_ERR_PAGE.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="WebForm\Form_GLOVIA_SEIKYU.aspx.designer.vb">
+      <DependentUpon>Form_GLOVIA_SEIKYU.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm\Form_GLOVIA_SEIKYU.aspx.vb">
+      <DependentUpon>Form_GLOVIA_SEIKYU.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="WebForm\Form_M_BUMON.aspx.designer.vb">
+      <DependentUpon>Form_M_BUMON.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm\Form_M_BUMON.aspx.vb">
+      <DependentUpon>Form_M_BUMON.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="WebForm\Form_M_KAMOKU.aspx.designer.vb">
+      <DependentUpon>Form_M_KAMOKU.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm\Form_M_KAMOKU.aspx.vb">
+      <DependentUpon>Form_M_KAMOKU.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="WebForm\Form_M_USER.aspx.designer.vb">
+      <DependentUpon>Form_M_USER.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm\Form_M_USER.aspx.vb">
+      <DependentUpon>Form_M_USER.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="WebForm\Form_M_ZEIRITU.aspx.designer.vb">
+      <DependentUpon>Form_M_ZEIRITU.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm\Form_M_ZEIRITU.aspx.vb">
+      <DependentUpon>Form_M_ZEIRITU.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="WebForm\Form_Print_Seikyu.aspx.designer.vb">
+      <DependentUpon>Form_Print_Seikyu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm\Form_Print_Seikyu.aspx.vb">
+      <DependentUpon>Form_Print_Seikyu.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="WebForm\Form_Print_SUITOU.aspx.designer.vb">
+      <DependentUpon>Form_Print_SUITOU.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm\Form_Print_SUITOU.aspx.vb">
+      <DependentUpon>Form_Print_SUITOU.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm\Form_SEIKYUDN_List.aspx.designer.vb">
+      <DependentUpon>Form_SEIKYUDN_List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm\Form_SEIKYUDN_List.aspx.vb">
+      <DependentUpon>Form_SEIKYUDN_List.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="WebForm\Form_SEIKYUDN_New.aspx.designer.vb">
+      <DependentUpon>Form_SEIKYUDN_New.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm\Form_SEIKYUDN_New.aspx.vb">
+      <DependentUpon>Form_SEIKYUDN_New.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="WebForm\Form_SHIME_SEIKYU.aspx.designer.vb">
+      <DependentUpon>Form_SHIME_SEIKYU.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm\Form_SHIME_SEIKYU.aspx.vb">
+      <DependentUpon>Form_SHIME_SEIKYU.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="WebForm\Form_SHIME_SUITOU.aspx.designer.vb">
+      <DependentUpon>Form_SHIME_SUITOU.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm\Form_SHIME_SUITOU.aspx.vb">
+      <DependentUpon>Form_SHIME_SUITOU.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm\Form_SYIKINDN_TEST.aspx.designer.vb">
+      <DependentUpon>Form_SYIKINDN_TEST.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm\Form_SYIKINDN_TEST.aspx.vb">
+      <DependentUpon>Form_SYIKINDN_TEST.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="WebForm\Form_SYKINDN_List.aspx.designer.vb">
+      <DependentUpon>Form_SYKINDN_List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm\Form_SYKINDN_List.aspx.vb">
+      <DependentUpon>Form_SYKINDN_List.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="WebForm\Form_SYKINDN_New.aspx.designer.vb">
+      <DependentUpon>Form_SYKINDN_New.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm\Form_SYKINDN_New.aspx.vb">
+      <DependentUpon>Form_SYKINDN_New.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="From_BumonChange.aspx.designer.vb">
+      <DependentUpon>From_BumonChange.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="From_BumonChange.aspx.vb">
+      <DependentUpon>From_BumonChange.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm\Form_GLOVIA_SUITOU.aspx.designer.vb">
+      <DependentUpon>Form_GLOVIA_SUITOU.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm\Form_GLOVIA_SUITOU.aspx.vb">
+      <DependentUpon>Form_GLOVIA_SUITOU.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm\Form_SYKINDN_New2.aspx.designer.vb">
+      <DependentUpon>Form_SYKINDN_New2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm\Form_SYKINDN_New2.aspx.vb">
+      <DependentUpon>Form_SYKINDN_New2.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="WebForm\UserCtrl\MenuUC.ascx.designer.vb">
+      <DependentUpon>MenuUC.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm\UserCtrl\MenuUC.ascx.vb">
+      <DependentUpon>MenuUC.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="obj\Debug\KeihiWeb.Resources.resources" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <Content Include="Site.Master" />
+    <Content Include="Site.Mobile.Master" />
+    <Content Include="ViewSwitcher.ascx" />
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>50778</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:50778/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>このプロジェクトは、このコンピューター上にない NuGet パッケージを参照しています。それらのパッケージをダウンロードするには、[NuGet パッケージの復元] を使用します。詳細については、http://go.microsoft.com/fwlink/?LinkID=322105 を参照してください。見つからないファイルは {0} です。</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

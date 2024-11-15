@@ -1,0 +1,105 @@
+﻿<%@ Master Language="VB" AutoEventWireup="true" CodeBehind="Site.master.vb" Inherits="KeihiWeb.SiteMaster" %>
+
+<!DOCTYPE html>
+
+<html lang="ja">
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%: Page.Title %> - 経費システム</title>
+    <link type="text/css" rel="stylesheet" href="~/Content/Common.css" />
+    <link type="text/css" rel="stylesheet" href="~/Content/jquery-ui-themes-1.12.0/themes/cupertino/jquery-ui.min.css" />
+    <link type="text/css" rel="stylesheet" href="~/Scripts/droppy/droppy.css" />
+    <script type="text/javascript" src='<% =VirtualPathUtility.ToAbsolute("~/Scripts/WebForms/STSCommon/common.js") %>'></script>
+    <script type="text/javascript" src='<% =VirtualPathUtility.ToAbsolute("~/Scripts/jquery-1.10.2.min.js") %>'></script>
+    <script type="text/javascript" src='<% =VirtualPathUtility.ToAbsolute("~/Scripts/jquery-ui-1.12.0/jquery-ui.min.js") %>'></script>
+    <script type="text/javascript" src='<% =VirtualPathUtility.ToAbsolute("~/Scripts/i18n/datepicker-ja.js") %>'></script>
+    <script type="text/javascript" src='<% =VirtualPathUtility.ToAbsolute("~/Scripts/jquery.blockUI.js") %>'></script>
+    <script type="text/javascript" src='<% =VirtualPathUtility.ToAbsolute("~/Scripts/droppy/jquery.droppy.js") %>'></script>
+    <script type="text/javascript">
+        function setBg(tr, color) {
+            tr.style.backgroundColor = color;
+        }
+        $(document).keydown(function (event) {
+            var keyCode = event.keyCode;
+
+            if (keyCode == 112 
+             || keyCode == 113
+             || keyCode == 114
+             || keyCode == 117 
+             || keyCode == 118 
+             || keyCode == 119 
+             || keyCode == 120 
+             || keyCode == 121 
+             || keyCode == 122 
+             || keyCode == 123 
+              ) {
+                return false;
+            }
+        });
+
+    </script>
+    <asp:PlaceHolder runat="server">
+        <%: Scripts.Render("~/bundles/modernizr") %>
+    </asp:PlaceHolder>
+
+    <webopt:bundlereference runat="server" path="~/Content/css" />
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+</head>
+<body>
+    <form runat="server">
+        <asp:ScriptManager runat="server">
+            <Scripts>
+                <%--ScriptManager のバンドル スクリプトの詳細については、http://go.microsoft.com/fwlink/?LinkID=301884 を参照してください --%>
+                <%--Framework スクリプト--%>
+                <asp:ScriptReference Name="MsAjaxBundle" />
+                <asp:ScriptReference Name="bootstrap" />
+                <asp:ScriptReference Name="respond" />
+                <asp:ScriptReference Name="WebForms.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebForms.js" />
+                <asp:ScriptReference Name="WebUIValidation.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebUIValidation.js" />
+                <asp:ScriptReference Name="MenuStandards.js" Assembly="System.Web" Path="~/Scripts/WebForms/MenuStandards.js" />
+                <asp:ScriptReference Name="GridView.js" Assembly="System.Web" Path="~/Scripts/WebForms/GridView.js" />
+                <asp:ScriptReference Name="DetailsView.js" Assembly="System.Web" Path="~/Scripts/WebForms/DetailsView.js" />
+                <asp:ScriptReference Name="TreeView.js" Assembly="System.Web" Path="~/Scripts/WebForms/TreeView.js" />
+                <asp:ScriptReference Name="WebParts.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebParts.js" />
+                <asp:ScriptReference Name="Focus.js" Assembly="System.Web" Path="~/Scripts/WebForms/Focus.js" />
+                <asp:ScriptReference Name="WebFormsBundle" />
+                <%--サイト スクリプト--%>
+  
+                           </Scripts>
+        </asp:ScriptManager>
+
+        <div class="navbar-fixed-top" style="background-color:#FFCCCC;">
+            <div class="container">
+                <div class="box">
+                    <div class="title">経費システム</div>
+                </div>
+                <div class="box">
+                    <asp:PlaceHolder ID="HeaderPlaceHolder1" runat="server" />
+                </div>
+                <div class="box">
+                    <div class="login_user" style="text-align:right;">
+                        <div><asp:Label ID="lblBumonName" runat="server" Text="bumonname"></asp:Label></div>
+                        <div><asp:Label ID="lblLoginUser" runat="server" Text="loginname"></asp:Label></div>
+                    </div>
+                    <div id="auth_info" class="hidden">
+                        <asp:TextBox ID="auth_user_id" runat="server"></asp:TextBox>
+                        <asp:TextBox ID="auth_user_name" runat="server"></asp:TextBox>
+                        <asp:TextBox ID="auth_user_kana" runat="server"></asp:TextBox>
+                        <asp:TextBox ID="auth_user_level" runat="server"></asp:TextBox>
+                        <asp:TextBox ID="auth_bumon_cd" runat="server"></asp:TextBox>
+                    </div>
+                </div>
+                <div class="clearboth"></div>
+            </div>
+        </div>
+        
+        <div class="container body-content">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>
