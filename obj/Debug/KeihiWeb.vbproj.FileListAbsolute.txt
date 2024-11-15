@@ -42,3 +42,25 @@ C:\Users\STS02\Desktop\新しいフォルダー (3)\KeihiWeb\obj\Debug\KeihiWeb.
 C:\Users\STS02\Desktop\新しいフォルダー (3)\KeihiWeb\obj\Debug\WebForms_Basic.xml
 C:\Users\STS02\Desktop\新しいフォルダー (3)\KeihiWeb\obj\Debug\KeihiWeb.pdb
 C:\Users\STS02\Desktop\新しいフォルダー (3)\KeihiWeb\obj\Debug\KeihiWeb.vbprojResolveAssemblyReference.cache
+C:\ishidaDdrive\MtoneRepo\KeihiWeb\KeihiWeb\bin\roslyn\csc.exe
+C:\ishidaDdrive\MtoneRepo\KeihiWeb\KeihiWeb\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\ishidaDdrive\MtoneRepo\KeihiWeb\KeihiWeb\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\ishidaDdrive\MtoneRepo\KeihiWeb\KeihiWeb\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\ishidaDdrive\MtoneRepo\KeihiWeb\KeihiWeb\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\ishidaDdrive\MtoneRepo\KeihiWeb\KeihiWeb\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\ishidaDdrive\MtoneRepo\KeihiWeb\KeihiWeb\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\ishidaDdrive\MtoneRepo\KeihiWeb\KeihiWeb\bin\roslyn\System.Collections.Immutable.dll
+C:\ishidaDdrive\MtoneRepo\KeihiWeb\KeihiWeb\bin\roslyn\System.Reflection.Metadata.dll
+C:\ishidaDdrive\MtoneRepo\KeihiWeb\KeihiWeb\bin\roslyn\vbc.exe
+C:\ishidaDdrive\MtoneRepo\KeihiWeb\KeihiWeb\bin\roslyn\VBCSCompiler.exe
+C:\ishidaDdrive\MtoneRepo\KeihiWeb\KeihiWeb\bin\roslyn\VBCSCompiler.exe.config
+C:\ishidaDdrive\MtoneRepo\KeihiWeb\KeihiWeb\bin\KeihiWeb.dll.config
+C:\ishidaDdrive\MtoneRepo\KeihiWeb\KeihiWeb\bin\KeihiWeb.dll
+C:\ishidaDdrive\MtoneRepo\KeihiWeb\KeihiWeb\bin\KeihiWeb.pdb
+C:\ishidaDdrive\MtoneRepo\KeihiWeb\KeihiWeb\bin\WebForms_Basic.xml
+C:\ishidaDdrive\MtoneRepo\KeihiWeb\KeihiWeb\obj\Debug\KeihiWeb.vbprojResolveAssemblyReference.cache
+C:\ishidaDdrive\MtoneRepo\KeihiWeb\KeihiWeb\obj\Debug\KeihiWeb.Resources.resources
+C:\ishidaDdrive\MtoneRepo\KeihiWeb\KeihiWeb\obj\Debug\KeihiWeb.vbproj.GenerateResource.Cache
+C:\ishidaDdrive\MtoneRepo\KeihiWeb\KeihiWeb\obj\Debug\KeihiWeb.dll
+C:\ishidaDdrive\MtoneRepo\KeihiWeb\KeihiWeb\obj\Debug\WebForms_Basic.xml
+C:\ishidaDdrive\MtoneRepo\KeihiWeb\KeihiWeb\obj\Debug\KeihiWeb.pdb

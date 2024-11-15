@@ -21,7 +21,7 @@
                 <table class="default">
                     <tr>
                         <th>
-                            <h4>ログインID&nbsp;</h4>
+                            <h4>ログインID_1&nbsp;</h4>
                         </th>
                         <td>
                             <asp:TextBox ID="txtUserID" runat="server" CssClass="input-lg"></asp:TextBox>
